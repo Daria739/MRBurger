@@ -1,0 +1,55 @@
+html,
+body {
+  height: 100%; }
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+  width: 100%;
+  margin: 0px;
+  line-height: 1.42;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+
+.container {
+  max-width: 972px;
+  margin: 0 auto; }
+
+ul {
+  margin: 0;
+  padding: 0; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: normal; }
+
+li {
+  list-style: none; }
+
+button {
+  background: transparent;
+  border: none; }
+
+.container_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+
+.title {
+  font: 72px Gagalin; }
