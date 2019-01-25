@@ -155,7 +155,8 @@
 
 .reviews__item {
   width: 25%;
-  height: 100%; }
+  height: 100%;
+  position: relative; }
   .reviews__item img {
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
@@ -164,6 +165,20 @@
     object-fit: cover;
     width: 100%;
     margin-bottom: -6px; }
+
+.reviews__item-effect {
+  width: 275px;
+  height: 325px;
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #77c4f0; }
+
+.reviews__item-effect:hover {
+  display: block; }
 
 .points {
   display: -webkit-box;
@@ -185,7 +200,9 @@
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  cursor: pointer; }
+  cursor: pointer;
+  position: fixed;
+  z-index: 10; }
 
 .points__item {
   width: 6px;
@@ -207,7 +224,4 @@
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  -webkit-transition-duration: .2s;
-  -o-transition-duration: .2s;
-  transition-duration: .2s; }
+  transform: translate(-50%, -50%); }
