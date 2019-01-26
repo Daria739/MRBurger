@@ -1,7 +1,4 @@
 
-$yellow: #f9b43b;
-$orange: #e45028;
-$title-font: 72px Gagalin;
 .first-screen {
     min-height: 100%;
     width: 100%;
@@ -81,18 +78,21 @@ $title-font: 72px Gagalin;
 }
 
 .first-screen__desc {
-    margin-top: 150px;
-    margin-left: 11px;
+    width: 50%;
+    margin-bottom: -75px;
     .title {
         color: $yellow;
-        margin-bottom: -70px;
     }
     .subtitle {
         font-family: Lifehack;
         font-size: 65px;
         font-weight: 500;
-        line-height: 1em;
+        margin: 0;
     }
+}
+
+.first-screen__image {
+    width: 50%;
 }
 
 .arrow {
