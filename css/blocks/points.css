@@ -28,5 +28,5 @@
 
 .points__item {
   margin-bottom: 10px; }
-  .points__item.active .fixed-menu__link {
+  .points__item.active .points__item-link {
     border-color: #fff; }
