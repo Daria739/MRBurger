@@ -60,6 +60,9 @@ button {
 
 .section {
     min-height: 650px;
+    height: 100vh;
+
+
     &_centered {
         display: flex;
         flex-direction: column;
