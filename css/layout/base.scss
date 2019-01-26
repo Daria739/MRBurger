@@ -1,4 +1,6 @@
-$title-font: 72px Gagalin;
+* {
+    box-sizing: border-box;
+}
 
 html,
 body {
@@ -12,20 +14,18 @@ body {
     line-height: 1.42;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    position: relative;
 }
 
 .wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+    overflow: hidden;
+    min-height: 100%;
+    width: 100%;
+    min-width: 940px;
 }
 
 .container {
-    max-width: 972px;
+    width: 940px;
     margin: 0 auto;
 }
 
@@ -54,12 +54,15 @@ button {
 }
 
 
-.container_header {
-    display: flex;
-    justify-content: space-between;
-}
-
-
 .title {
     font: $title-font;
+}
+
+.section {
+    min-height: 650px;
+    &_centered {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 }

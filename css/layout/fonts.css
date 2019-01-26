@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "Gagalin-Regular";
+  src: url("./fonts/Gagalin-Regular.eot");
+  /* IE9 Compat Modes */
+  src: url("./fonts/Gagalin-Regular.eot?#iefix") format("embedded-opentype"), url("./fonts/Gagalin-Regular.otf") format("opentype"), url("./fonts/Gagalin-Regular.svg") format("svg"), url("./fonts/Gagalin-Regular.ttf") format("truetype"), url("./fonts/Gagalin-Regular.woff") format("woff"), url("./fonts/Gagalin-Regular.woff2") format("woff2");
+  /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Lifehack-Medium";
+  src: url("./fonts/LifehackMedium.eot");
+  /* IE9 Compat Modes */
+  src: url("./fonts/LifehackMedium.eot?#iefix") format("embedded-opentype"), url("./fonts/LifehackMedium.otf") format("opentype"), url("./fonts/LifehackMedium.svg") format("svg"), url("./fonts/LifehackMedium.ttf") format("truetype"), url("./fonts/LifehackMedium.woff") format("woff"), url("./fonts/LifehackMedium.woff2") format("woff2");
+  /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal; }

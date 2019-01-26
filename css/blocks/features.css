@@ -1,0 +1,45 @@
+.features {
+  padding-top: 134px;
+  padding-bottom: 155px;
+  background: url("./img/second-screen-bg.jpg") center center no-repeat;
+  background-size: cover; }
+  .features h2 {
+    text-align: center;
+    margin-bottom: 55px; }
+  .features__item {
+    width: 33%; }
+  .features__item:not(:last-child) {
+    margin-right: 17px; }
+  .features__desc {
+    text-align: center; }
+  .features h3 {
+    font-family: Lifehack;
+    font-size: 24px;
+    font-weight: 500; }
+  .features p {
+    text-align: center;
+    color: rgba(47, 50, 52, 0.8);
+    font-family: Ubuntu;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.71; }
+  .features ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+
+.features__icon {
+  width: 97px;
+  height: 89px;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  margin-bottom: 40px; }
+
+.features__icon-meat {
+  background: url("./img/css_sprites.png") -30px -30px; }
+
+.features__icon-hand {
+  background: url("./img/css_sprites.png") -30px -179px; }
+
+.features__icon-natural {
+  background: url("./img/css_sprites.png") -187px -30px; }

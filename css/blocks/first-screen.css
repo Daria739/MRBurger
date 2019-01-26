@@ -1,0 +1,105 @@
+.first-screen {
+  min-height: 100%;
+  width: 100%;
+  background: url("../img/texture.png") no-repeat fixed, url("../img/background-photo.png") no-repeat fixed;
+  background-size: cover;
+  padding-top: 13px;
+  padding-bottom: 35px;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.header__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: auto; }
+
+.menu {
+  font-weight: 500;
+  font-size: 13px;
+  text-transform: uppercase; }
+
+.menu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 25px; }
+
+.menu__item:not(:last-child):after {
+  content: "";
+  width: 5px;
+  height: 5px;
+  background-color: #fff;
+  border-radius: 50%;
+  margin-left: 22px;
+  margin-right: 22px;
+  display: inline-block;
+  vertical-align: middle; }
+
+.menu__item a {
+  text-decoration: none;
+  color: #fff;
+  -webkit-transition-duration: .2s;
+  -o-transition-duration: .2s;
+  transition-duration: .2s; }
+
+.menu__item:hover {
+  text-decoration: underline; }
+
+.btn_orange {
+  background-color: #e45028;
+  padding: 13px 17px;
+  color: #fff;
+  text-transform: uppercase;
+  border-radius: 7px;
+  -webkit-transition-duration: .3s;
+  -o-transition-duration: .3s;
+  transition-duration: .3s;
+  text-decoration: none;
+  font-size: 13px; }
+  .btn_orange:hover {
+    background-color: #c13c18; }
+
+.first-screen__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.first-screen__desc {
+  margin-top: 150px;
+  margin-left: 11px; }
+  .first-screen__desc .title {
+    color: #f9b43b;
+    margin-bottom: -70px; }
+  .first-screen__desc .subtitle {
+    font-family: Lifehack;
+    font-size: 65px;
+    font-weight: 500;
+    line-height: 1em; }
+
+.arrow {
+  width: 29px;
+  height: 14px;
+  background: url("../img/css_sprites.png") -335px -134px;
+  margin: 0 auto;
+  margin-top: 70px; }
