@@ -1,0 +1,44 @@
+.contacts {
+    background: url('../img/map-marker.jpg') center center no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.footer {
+    position: absolute;
+    width: 100%;
+    top: 90%;
+    z-index: 11;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #2f3234;
+    display: flex;
+    align-items: center;
+}
+
+.footer__col {
+    width: 50%;
+    font-size: 14px;
+    font-weight: 300;
+    color: #fff;
+}
+
+.footer__phone {
+    font-weight: bold;
+    color: #e45028;
+    display: flex;
+    align-items:center;
+}
+
+.footer__phone:before {
+    content: "";
+    width: 12px;
+    height: 11px;
+    background: url(../img/phone.png) center center no-repeat;
+    display: block;
+    margin-right: 10px;
+}
+
+
+

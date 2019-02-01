@@ -1,0 +1,22 @@
+.our-menu {
+    background: url('../img/our-menu-bg.jpg') center center no-repeat;
+    background-size: cover;
+    position: relative;
+
+    .title {
+        color: #fff;
+        padding-top: 10%;
+        padding-left: 10%;
+    }
+}
+
+.our-menu__list {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.our-menu__content {
+display: none;
+}
