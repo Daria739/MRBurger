@@ -168,6 +168,11 @@ textarea {
     text-transform: uppercase;
     cursor: pointer;
     margin-right: 20px;
+    transition-duration: .3s;
+
+    &:hover {
+        background-color: darken($orange, 15%);
+    }
 }
 
 .btn-reset {
@@ -175,6 +180,10 @@ textarea {
     font-size: 14px;
     font-weight: 300;
     color: #fff;
+
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 

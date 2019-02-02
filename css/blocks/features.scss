@@ -36,21 +36,32 @@
 }
 
 .features__icon {
-    width: 97px;
-    height: 89px;
-    background-repeat: no-repeat;
-    margin: 0 auto;
     margin-bottom: 20px;
 }
 
-.features__icon-meat {
-    background: url('../img/css_sprites.png') -30px -30px;
+.meat-icon {
+    max-width: 97px;
+    max-height: 89px;
 }
 
-.features__icon-hand {
-    background: url('../img/css_sprites.png') -30px -179px;
+.hand-icon {
+    max-width: 73px;
+    max-height: 85px;
+
 }
 
-.features__icon-natural {
-    background: url('../img/css_sprites.png') -187px -30px;
+.natural-icon {
+    max-width: 88px;
+    max-height: 75px;
+}
+
+.features__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.features__desc {
+    display: flex;
+    flex-direction: column;
 }

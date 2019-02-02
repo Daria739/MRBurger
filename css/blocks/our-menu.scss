@@ -15,8 +15,92 @@
     right: 0;
     top: 0;
     bottom: 0;
+    width: auto;
+    display: flex;
+    justify-content: flex-end;
+    height: 100%;
+    max-width: 70%;
 }
 
 .our-menu__content {
-display: none;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 5rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position:relative;
+}
+
+.our-menu__content-meet {
+    background-image: url('../img/our-menu-burger-1.jpg');
+}
+
+.our-menu__content-vegetarian {
+    background-image: url('../img/our-menu-burger-2.jpg');
+}
+
+.our-menu__content-diet {
+    background-image: url('../img/our-menu-burger-3.jpg');
+}
+
+.our-menu__content:before {
+    content: "";
+    background-color: rgba(20,20,20,0.7);
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.our-menu__item {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.our-menu__btn:hover {
+    color: $yellow;
+}
+
+.our-menu__btn {
+    font-family: "Gagalin";
+    font-size: 40px;
+    transform: rotate(-90deg);
+    white-space: nowrap;
+    color: #fff;
+    display: inline-block;
+    line-height: 80px;
+    margin-bottom: 40%;
+    transition-duration: .3s;
+}
+
+.our-menu__desc {
+height: 0;
+overflow: hidden;
+}
+
+.our-menu__item_active {
+
+    .our-menu__desc {
+        background: rgba(47,50,52,.93);
+        height: 100%;
+        overflow: hidden;
+        
+        font-weight: 300;
+        line-height: 1.5rem;
+        opacity: .93;
+        background: #333231;
+        color: #fff;
+        font-size: 14px;
+        padding: 50px 25px;
+            
+        
+    }
+
+    .our-menu__btn {
+        color: $yellow;
+    }
 }
