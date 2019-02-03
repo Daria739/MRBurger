@@ -1,67 +1,100 @@
 .features {
-    padding-top: 134px;
-    padding-bottom: 155px;
     background: url('../img/second-screen-bg.jpg') center center no-repeat;
     background-size: cover;
+    height: 100%;
+    padding-top: 6.25em;
+    padding-bottom: 6.25em;
     h2 {
         text-align: center;
-        margin-bottom: 55px;
+        margin-bottom: 4.375rem;
     }
     &__item {
         width: 33%;
+        
+        @include phones {
+            width: 100%;
+        }
     }
     &__item:not(:last-child) {
-        margin-right: 17px;
+        margin-right: 1.063empx;
     }
     &__desc {
         text-align: center;
     }
     h3 {
         font-family: 'Lifehack';
-        font-size: 24px;
+        font-size: 1.5rem;
         font-weight: 500;
+        @include phones {
+            text-align: left;
+        }
     }
     p {
         text-align: center;
         color: rgba(47, 50, 52, 0.8);
         font-family: Ubuntu;
-        font-size: 14px;
+        font-size: 0.875rem;
         font-weight: 300;
         line-height: 1.71;
-        margin-top: 5px;
+        margin-top: 0.313em;
+        @include phones {
+            text-align: left;
+        }
     }
     ul {
         display: flex;
+        @include phones {
+            display: flex;
+            flex-direction: column;
+        }
     }
 }
 
+.features__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .features__icon {
-    margin-bottom: 20px;
+    margin-bottom: 1.250em;
+
 }
 
 .meat-icon {
-    max-width: 97px;
-    max-height: 89px;
+    max-width: 6.063em;
+    max-height: 5.563em;
 }
 
 .hand-icon {
-    max-width: 73px;
-    max-height: 85px;
+    max-width: 4.563em;
+    max-height: 5.313em;
 
 }
 
 .natural-icon {
-    max-width: 88px;
-    max-height: 75px;
+    max-width: 5.5em;
+    max-height: 4.688em;
 }
+
 
 .features__item {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @include phones {
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+    }
 }
 
 .features__desc {
     display: flex;
     flex-direction: column;
-}
+    @include phones {
+        margin-left: 1.25em;
+    }
+
+    }

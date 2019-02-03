@@ -2,6 +2,7 @@
 .reviews {
     background-color: #000;
     position: relative;
+    height: 100%;
 }
 
 .reviews__list {
@@ -22,6 +23,12 @@
     background-repeat: no-repeat;
     filter: grayscale(100%);
     position: relative;
+
+    @include tablets () {
+        width: 50%;
+        height: 35%;
+    }
+
     &:hover {
         .reviews__item-hover {
             opacity: 1;
@@ -31,15 +38,30 @@
 
 .reviews__title {
     font-family: Gagalin;
-    font-size: 14px;
-    margin-bottom: 30px;
+    font-size: 0.875rem;
+    margin-bottom: 1.875em;
+    @include tablets() {
+        margin-bottom: 0.2em;
+    }
+
+    @include phones() {
+        font-size: 1.5rem;
+    }
 }
 
 .reviews__text {
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 300;
     line-height: 1.87em;
-    padding-bottom: 17px;
+    padding-bottom: 1.063em;
+    @include tablets() {
+        padding: 0;
+        line-height: 1.2em;
+    }
+
+    @include phones() {
+        display: none; 
+    }
 }
 
 .reviews__item-hover {
@@ -49,24 +71,31 @@
     right: 0;
     bottom: 0;
     background-color: rgba(20, 20, 20, 0.7);
-    padding: 50px 33px 50px 20px;
+    padding: 3.125em 2.063em 3.125em 1.25em;
     color: #fff;
     opacity: 0;
     transition: opacity .3s;
+
+    @include tablets() {
+        text-align: center;
+        padding: 1.3em;
+
+    }
 }
 
 .btn_black {
     background-color: #2f3234;
-    padding: 13px 15px;
-    max-width: 110px;
+    padding: 1em 1em;
+    max-width: 8em;
     color: #fff;
     text-transform: uppercase;
     border-radius: 7px;
-    font-size: 13px;
+    font-size: 0.8125rem;
     font-weight: 500;
     text-decoration: none;
     cursor: pointer;
     transition-duration: .3s;
+    
 
     &:hover {
         background-color: darken(#2f3234, 20%);

@@ -7,8 +7,15 @@ $orange: #e45028;
 
 $title-font: 72px 'Gagalin';
 
+/* breakpoints */
+$tablets: 768px;
+$phones: 480px;
+
 /* normalize */
 @import "layout/normalize.css";
+
+/* media */
+@import "layout/media.scss";
 
 /* base settings */
 @import "layout/base.scss";

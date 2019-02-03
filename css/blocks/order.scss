@@ -1,39 +1,67 @@
 .order {
-    background: url('../img/logos-texture-order.png') no-repeat fixed, url('../img/chalkboard-texture-order.png') no-repeat fixed;
+    background: url('../img/logos-texture-order.png') center center no-repeat, url('../img/chalkboard-texture-order.png') center center no-repeat;
     background-size: cover;
+
     color: #fff;
+    height: 100%;
+
+    position: relative;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding-top: 9.375em;
+    padding-bottom: 9.375em;
+
 
     .title {
         color: $yellow;
-        margin-bottom: 45px;
         text-align: center;
+        margin-bottom: 0.4em;
     }
 }
 
-
+.order__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
 
 
 .form {
     display: flex;
+    margin-left: -5px;
+    @include tablets () {
+        flex-direction: column;
+        margin-bottom: 1.25rem;
+        margin-left: 0;
+    }
 }
 
 .form__col {
-    margin-right: 20px;
+    margin-right: 1.25em;
     flex:1;
+
+    @include tablets() {
+        margin-right: 0;
+        width: initial;
+    }
 }
 
 .form__col:last-child {
     margin-right: 0;
+    @include tablets () {
+        margin-top: 1.25em;
+    }
 }
 
 .form__row {
     display: flex;
-    margin-bottom: 20px;
+    margin-bottom: 1.25em;
+
 }
 
 .form__row:last-child {
@@ -41,7 +69,7 @@
 }
 
 .form__block {
-    margin-right: 20px;
+    margin-right: 1.25em;
     flex: 1;
 }
 
@@ -55,13 +83,14 @@ textarea {
     background: #fff;
     border: none;
     width: 100%;
-    padding: 8px 10px;
+    padding: 0.5em 0.625em;
+    
 }
 
 .form__block-title {
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 300;
-    margin-bottom: 9px;
+    margin-bottom: 0.563em;
 }
 
 .form-controlls__buttons {
@@ -71,7 +100,7 @@ textarea {
 .form-controlls__btn {
     display: flex;
     align-items: center;
-    margin-right: 20px;
+    margin-right: 1.25em;
     &:last-child {
         margin-right: 0;
     }
@@ -87,18 +116,18 @@ textarea {
 }
 
 .form-controlls__btn-title {
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 300;
 }
 
 
 .form-controlls__fake-radio {
-    width: 15px;
-    height: 15px;
+    width: 0.938em;
+    height: 0.938em;
     border-radius: 50%;
     background-color: #fff;
     position: relative;
-    margin-right: 10px;
+    margin-right: 0.625em;
     
 }
 
@@ -106,8 +135,8 @@ textarea {
     content: "";
     display: none;
     position: absolute;
-    width: 7px;
-    height: 7px;
+    width: 0.438em;
+    height: 0.438em;
     border-radius: 50%;
     background-color: #e35028;
     top: 50%;
@@ -131,19 +160,19 @@ textarea {
 }
 
 .form__checkbox-fake {
-    width: 15px;
-    height: 15px;
+    width: 0.938em;
+    height: 0.938em;
     background-color: #fff;
     position: relative;
-    margin-right: 10px;
+    margin-right: 0.625em;
 }
 
 .form__checkbox-fake:after {
     content: "";
     display: none;
     position: absolute;
-    width: 11px;
-    height: 9px;
+    width: 0.688em;
+    height: 0.563em;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -154,20 +183,33 @@ textarea {
 
 .form__checkbox-title {
     font-weight: 300;
-    font-size: 14px;
+    font-size: 0.875rem;
+}
+
+input:focus, 
+textarea:focus {
+    border: 1px solid $orange;
+    outline: none;
+    font-size: 0.875rem;
+    font-weight: 300;
+}
+
+input, 
+textarea {
+    font-size: 0.875rem;
+    font-weight: 300;
 }
 
 .btn-submit {
-    width: 97px;
-    height: 35px;
     border-radius: 5px;
     background-color: #e45028;
     color: #fff;
-    font-size: 13px;
+    font-size: 0.8125rem;
     font-weight: 500;
     text-transform: uppercase;
     cursor: pointer;
-    margin-right: 20px;
+    margin-right: 1.25em;
+    padding: 0.813em 1.063em;
     transition-duration: .3s;
 
     &:hover {
@@ -177,7 +219,7 @@ textarea {
 
 .btn-reset {
     cursor: pointer;
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 300;
     color: #fff;
 

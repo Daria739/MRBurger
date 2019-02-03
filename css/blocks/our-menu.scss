@@ -5,8 +5,8 @@
 
     .title {
         color: #fff;
-        padding-top: 10%;
-        padding-left: 10%;
+        padding-top: 6%;
+        padding-left: 6%;
     }
 }
 
@@ -20,6 +20,10 @@
     justify-content: flex-end;
     height: 100%;
     max-width: 70%;
+
+    @include tablets() {
+        max-width: 100%;
+    }
 }
 
 .our-menu__content {
@@ -67,12 +71,12 @@
 
 .our-menu__btn {
     font-family: "Gagalin";
-    font-size: 40px;
+    font-size: 2.5rem;
     transform: rotate(-90deg);
     white-space: nowrap;
     color: #fff;
     display: inline-block;
-    line-height: 80px;
+    line-height: 5em;
     margin-bottom: 40%;
     transition-duration: .3s;
 }
@@ -94,9 +98,18 @@ overflow: hidden;
         opacity: .93;
         background: #333231;
         color: #fff;
-        font-size: 14px;
-        padding: 50px 25px;
-            
+        font-size: 0.875rem;
+        padding: 3.125em 1.563em;
+        
+        @include tablets() {
+            font-size: 0.75rem;
+            line-height: 1.3rem;
+        }
+
+        @include phones() {
+            font-size: 0.65rem;
+            line-height: 1.25rem;
+        }
         
     }
 

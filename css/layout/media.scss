@@ -1,0 +1,22 @@
+@media screen and (max-width: 850px) {
+  .first-screen__content {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20%;
+    text-align: center;
+  }
+}
+
+
+@mixin tablets() {
+  @media screen and (max-width: $tablets) {
+    @content
+  }
+}
+
+@mixin phones() {
+  @media screen and (max-width: $phones) {
+    @content
+  }
+}

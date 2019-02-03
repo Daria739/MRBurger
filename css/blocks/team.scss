@@ -13,12 +13,19 @@
     right: 0;
     top: 0;
     bottom: 0;
-    padding-left: 98px;
-    padding-top: 113px;
+    padding-left: 6.125em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    @include tablets() {
+        left: 0;
+        align-items: center;
+    }
 
     .title {
         color: $yellow;
-        margin-bottom: 46px;
+        margin-bottom: 4.375rem;
     }
 }
 
@@ -27,20 +34,33 @@
     flex-direction: column;
 }
 
+.team__item {
+    @include tablets() {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
 
 .team__btn-content {
     display: none;
-    margin-bottom: 46px;
+    margin-bottom: 2.875em;
 
     .team__btn-avatar {
-        width: 100px;
-        height: 100px;
+        width: 6.250em;
+        height: 6.250em;
         overflow: hidden;
         border-radius: 50%;
         display: flex; 
         flex-shrink: 0;
         flex-basis: 1;
-        margin-right: 20px;
+        margin-right: 1.250em;
+
+        @include tablets() {
+            margin-right: 0;
+        }
 
     }
 
@@ -53,8 +73,8 @@
 
     .team__btn-text {
         color: #fff;
-        max-width: 208px;
-        font-size: 14px;
+        max-width: 13em;
+        font-size: 0.875rem;
 
         h3 {
             font-weight: bold;
@@ -68,9 +88,9 @@
 
 .team__btn {
     font-family: Gagalin;
-    font-size: 14px;
+    font-size: 0.875rem;
     color: #fff;
-    margin-bottom: 35px;
+    margin-bottom: 2.188em;
 
     display: flex;
     align-items: center;
@@ -89,7 +109,7 @@
     height: 0;
     border: 5px solid transparent;
     border-top: 5px solid $yellow;
-    margin-right: 10px;
+    margin-right: 0.625em;
     margin-top: 5%;
 }
 
@@ -104,12 +124,19 @@
         height: 0;
         border: 5px solid transparent;
         border-bottom: 5px solid $yellow;
-        margin-right: 10px;
+        margin-right: 0.625em;
         margin-bottom: 5%;
     }
 
     .team__btn-content {
         display: flex;
+        @include tablets() {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+        }
  
     }
     
