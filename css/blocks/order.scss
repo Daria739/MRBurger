@@ -95,6 +95,9 @@ textarea {
 
 .form-controlls__buttons {
     display: flex;
+    
+    
+
 }
 
 .form-controlls__btn {
@@ -104,6 +107,7 @@ textarea {
     &:last-child {
         margin-right: 0;
     }
+
 }
 
 .form-controlls__real-radio {
@@ -228,6 +232,23 @@ textarea {
     }
 }
 
+.form__row-btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form__row-check {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form__row-radio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 
 

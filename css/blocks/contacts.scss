@@ -13,6 +13,9 @@
     right: 0;
     bottom: 0;
     background-color: #2f3234;
+    @include phones {
+        top: 85%;
+    }
 }
 
 .footer__container {
@@ -22,6 +25,7 @@
     align-items: center;
 
     @include phones {
+        height: 100%;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -56,6 +60,9 @@
 
 .socials__list {
     display: flex;
+    @include phones {
+        margin-top: 10px;
+    }
 }
 
 .socials__item {
