@@ -1,34 +1,31 @@
 .features {
-    background: url('../img/second-screen-bg.jpg') center center no-repeat;
+    background: url('../img/second-screen-bg.jpg') no-repeat;
     background-size: cover;
-    height: 100%;
-    padding-top: 6.25em;
-    padding-bottom: 6.25em;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    background-position: center center;
+    height: 100vh;
+
     h2 {
-        text-align: center;
-        margin-bottom: 4.375rem;
-    }
-    &__item {
-        width: 33%;
-        
+        margin-bottom: 3rem;
+
         @include phones {
-            width: 100%;
+            font-size: 52px;
         }
     }
-    &__item:not(:last-child) {
-        margin-right: 1.063empx;
-    }
-    &__desc {
-        text-align: center;
-    }
+
     h3 {
         font-family: 'Lifehack';
         font-size: 1.5rem;
         font-weight: 500;
+        margin-bottom: .9375rem;
         @include phones {
             text-align: left;
+            margin-bottom: 0.3em;
         }
     }
+
     p {
         text-align: center;
         color: rgba(47, 50, 52, 0.8);
@@ -41,23 +38,27 @@
             text-align: left;
         }
     }
-    ul {
-        display: flex;
-        @include phones {
-            display: flex;
-            flex-direction: column;
-        }
-    }
 }
 
 .features__container {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    height: 69%;
+    @include phones {
+        height: 90%;
+    }
 }
 
 .features__icon {
-    margin-bottom: 1.250em;
+    margin-bottom: 1em;
+    width: 100%;
+@include phones {
+display: flex; 
+align-items: flex-start;
+    margin-right: 2%;
+}
+
 
 }
 
@@ -77,24 +78,32 @@
     max-height: 4.688em;
 }
 
+.features__list {
+    display: flex;
+    @include phones {
+        flex-direction: column;
+        padding-bottom: 7%;
+      }
+}
+
 
 .features__item {
     display: flex;
     flex-direction: column;
-    align-items: center;
-
+    padding: 0 0.938em;
+    margin-bottom: 3.125em;
     @include phones {
         flex-direction: row;
-        align-items: center;
         text-align: left;
-    }
+
+        margin-bottom: .625rem;
+        align-items: flex-start;
+        justify-content: space-between;
+      }
 }
 
 .features__desc {
-    display: flex;
-    flex-direction: column;
     @include phones {
-        margin-left: 1.25em;
+        width: 70%;
     }
-
-    }
+}

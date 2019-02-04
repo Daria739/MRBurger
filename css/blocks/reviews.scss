@@ -2,7 +2,6 @@
 .reviews {
     background-color: #000;
     position: relative;
-    height: 100%;
 }
 
 .reviews__list {
@@ -26,7 +25,7 @@
 
     @include tablets () {
         width: 50%;
-        height: 35%;
+        height: 25%;
     }
 
     &:hover {
@@ -54,9 +53,15 @@
     font-weight: 300;
     line-height: 1.87em;
     padding-bottom: 1.063em;
+    max-height: 70%; 
+    overflow: hidden;
     @include tablets() {
         padding: 0;
+        margin-bottom: 5%;
         line-height: 1.2em;
+        
+        max-height: 40%;
+        overflow: hidden;
     }
 
     @include phones() {
