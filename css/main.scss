@@ -5,12 +5,11 @@ $orange: #e45028;
 
 /* font-style */
 
-$title-font: 72px 'Gagalin';
+$title-font: 4.5rem 'Gagalin';
 
 /* breakpoints */
 $tablets: 768px;
 $phones: 480px;
-$middle: 835px;
 
 /* normalize */
 @import "layout/normalize.css";

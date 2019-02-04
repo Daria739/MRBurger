@@ -1,4 +1,3 @@
-
 .first-screen {
     width: 100%;
     background: url('../img/texture.png') center no-repeat , url('../img/background-photo.png') center no-repeat ;
@@ -36,9 +35,6 @@ padding-bottom: 15%;
     text-transform: uppercase;
 
     
-    @include middle() {
-        display: none;
-    }
         @include tablets() {
         display: none;
     }
@@ -98,9 +94,6 @@ padding-bottom: 15%;
 
 .menu-burger {
     display: none;
-    @include middle() {
-        display: inline-block;
-    }
     @include tablets() {
         display: inline-block;
     }
@@ -149,64 +142,71 @@ padding-bottom: 15%;
     @include tablets {
         padding-bottom: 0;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        
+
     }
 }
 
 .first-screen__desc {
-    width: 50%;
+    width: 45%;
     margin-top: 10%;
 
     @include tablets() {
-
-        width: 100%;
         height: 65%;
+        margin: -0;
         text-align: center;
-        padding-top: 1.25rem;
-        padding-bottom: 6.25rem;
+        width: 75%;
     }
     
 
     @include phones () {
+        height: 40%;
         width: 100%;
-        height: 50%;
     }
     .title {
         color: $yellow;
+        font-size: 4rem;
 
 
         @include phones () {
-            font-size: 3.9375rem;
+            font-size: 3.4rem;
         }
     }
     .subtitle {
         font-family: Lifehack;
-        font-size: 4.0625rem;
+        font-size:3.65rem;
         color: #fff;
         font-weight: 500;
         margin: 0;
 
         @include tablets () {
-            font-size: 2.6rem;
+            font-size: 2.3rem;
             text-align: center;
             line-height: 0.2rem;
+            width: 100%;
         }
 
         @include phones () {
-            font-size: 2rem;
+            font-size: 1.8rem;
+            width: 100%;
+            line-height: 0.1rem;
         }
     }
 }
 
 
 .first-screen__image {
-
+height: 97%;
     @include tablets {
         width: 100%;
-        height: 50%;
+        height: 60%;
         text-align: center;
+        margin-top: -4%;
     }
     @include phones {
-        height: 40%;
     }
 }
 

@@ -5,13 +5,13 @@
     display: flex;
     align-items: center;
     background-position: center center;
-    height: 100vh;
 
     h2 {
         margin-bottom: 3rem;
 
         @include phones {
             font-size: 52px;
+            margin-bottom: 1.25rem;
         }
     }
 
@@ -36,6 +36,7 @@
         margin-top: 0.313em;
         @include phones {
             text-align: left;
+            line-height: 1.3;
         }
     }
 }
@@ -54,9 +55,8 @@
     margin-bottom: 1em;
     width: 100%;
 @include phones {
-display: flex; 
-align-items: flex-start;
-    margin-right: 2%;
+    width: 25%;
+    text-align: center;
 }
 
 
@@ -95,9 +95,8 @@ align-items: flex-start;
     @include phones {
         flex-direction: row;
         text-align: left;
-
-        margin-bottom: .625rem;
         align-items: flex-start;
+        margin-bottom: .625rem;
         justify-content: space-between;
       }
 }
