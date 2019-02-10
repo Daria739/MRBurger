@@ -14,7 +14,7 @@
 <body>
     <div class="wrapper">
 
-        <ul class="maincontent">
+        <div class="maincontent">
             <section class="section first-screen">
                 <div class="container first-screen__container">
 
@@ -45,9 +45,56 @@
                                     </div>
                                 </a>
 
+                                <div class="menu-burger-mobile">
+
+                                    <div class="menu-burger-mobile__header">
+                                        <div class="logo logo__menu-burger"><img src="./img/logo.png" alt="logo" class="logo"></div>
+
+                                        <button class="menu-burger-mobile-close" type="button">
+                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="20px"
+                                                class="close-icon">
+                                                <path fill-rule="evenodd" fill="rgb(255, 255, 255)"
+                                                    d="M12.828,9.999 L18.485,15.656 C19.266,16.437 19.266,17.703 18.485,18.484 C17.704,19.266 16.438,19.266 15.657,18.484 L10.000,12.827 L4.343,18.484 C3.562,19.266 2.296,19.266 1.515,18.484 C0.734,17.703 0.734,16.437 1.515,15.656 L7.172,9.999 L1.515,4.342 C0.734,3.561 0.734,2.295 1.515,1.514 C2.296,0.733 3.562,0.733 4.343,1.514 L10.000,7.171 L15.657,1.514 C16.438,0.733 17.704,0.733 18.485,1.514 C19.266,2.295 19.266,3.561 18.485,4.342 L12.828,9.999 Z" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    
+
+
+                                    <div class="menu-burger-mobile__content">
+                                        <ul class="menu-burger-mobile__list">
+
+                                            <li class="menu-burger-mobile__item">
+                                                <a href="#" class="menu-burger-mobile__link">О нас</a>
+                                            </li>
+
+                                            <li class="menu-burger-mobile__item">
+                                                <a href="#" class="menu-burger-mobile__link">Бургеры</a>
+                                            </li>
+
+                                            <li class="menu-burger-mobile__item">
+                                                <a href="#" class="menu-burger-mobile__link">Команда</a>
+                                            </li>
+
+                                            <li class="menu-burger-mobile__item">
+                                                <a href="#" class="menu-burger-mobile__link">Меню</a>
+                                            </li>
+
+                                            <li class="menu-burger-mobile__item">
+                                                <a href="#" class="menu-burger-mobile__link">Отзывы</a>
+                                            </li>
+
+                                            <li class="menu-burger-mobile__item">
+                                                <a href="#" class="menu-burger-mobile__link">Контакты</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
 
                             </div>
-                           
+
 
                         </div>
 
@@ -69,7 +116,7 @@
 
                 <a href="#" class="arrow">
                     <svg class="arrow-icon">
-                        <use xlink:href="./img/sprite.svg#arrow" ></use>
+                        <use xlink:href="./img/sprite.svg#arrow"></use>
                     </svg>
                 </a>
 
@@ -84,7 +131,7 @@
                         <li class="features__item">
                             <div class="features__icon">
                                 <svg class="meat-icon">
-                                    <use xlink:href="./img/sprite.svg#meat" ></use>
+                                    <use xlink:href="./img/sprite.svg#meat"></use>
                                 </svg>
                             </div>
 
@@ -99,7 +146,7 @@
                         <li class="features__item">
                             <div class="features__icon">
                                 <svg class="hand-icon">
-                                    <use xlink:href="./img/sprite.svg#hand" ></use>
+                                    <use xlink:href="./img/sprite.svg#hand"></use>
                                 </svg>
                             </div>
                             <div class="features__desc">
@@ -111,11 +158,11 @@
 
 
                         <li class="features__item">
-                                <div class="features__icon">
-                                    <svg class="natural-icon">
-                                        <use xlink:href="./img/sprite.svg#natural" ></use>
-                                    </svg>
-                                </div>
+                            <div class="features__icon">
+                                <svg class="natural-icon">
+                                    <use xlink:href="./img/sprite.svg#natural"></use>
+                                </svg>
+                            </div>
                             <div class="features__desc">
                                 <h3 class="title title_features">Натуральные ингредиенты</h3>
                                 <p class="text">Драма представляет собой деструктивный цикл. Анапест представляет собой
@@ -129,6 +176,146 @@
                 </div>
             </section>
 
+            <section class="burgers">
+                <div class="container burgers__container">
+                    <div class="burgers__content">
+                        <a href="#" class="burgers__arrow-link burgers__arrow-link_left">
+                            <svg class="arrow-scroll-icon">
+                                <use xlink:href="./img/sprite.svg#arrow"></use>
+                            </svg>
+                        </a>
+
+                        <ul class="burgers__list">
+                            <li class="burgers__item">
+
+                                <div class="burgers__col burgers__col_left">
+                                    <div class="burgers__img">
+                                        <img src="./img/slider-burger-1.png" alt="burger" class="burgers__img-pic">
+                                    </div>
+                                </div>
+
+                                <div class="burgers__col burgers__col_right">
+
+                                    <div class="burgers__info">
+                                        <h2 class="title burgers__title">Dark beef burger</h2>
+                                        <div class="burgers__desc">
+                                            Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками
+                                            нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с
+                                            добавлением экзотического соуса чураско.
+                                        </div>
+
+                                        <div class="burgers__order">
+
+                                            <div class="burgers__price">
+                                                <span class="burgers__price-number">500</span>
+                                                <span class="burgers__price-currency">рублей</span>
+                                            </div>
+
+                                            <a href="#" class="btn btn_orange">Заказать</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="burgers__kkal">
+                                    <div class="burgers__kkal-number">1200</div>
+                                    <div class="burgers__kkal-measure">ккал</div>
+                                </div>
+
+                                <div class="burgers__ingredients">
+
+                                    <svg class="burgers__ingredients-icon">
+                                        <use xlink:href="./img/sprite.svg#burger-pic"></use>
+                                    </svg>
+
+                                    <h4 class="burgers__ingredients-title">Состав</h4>
+
+                                </div>
+
+                            </li>
+                        </ul>
+
+                        <a href="#" class="burgers__arrow-link burgers__arrow-link_right">
+                            <svg class="arrow-scroll-icon">
+                                <use xlink:href="./img/sprite.svg#arrow"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <!--
+                <div class="burgers__arrow burgers__arrow_left">
+                    <a href="#" class="burgers__arrow-link">
+                        <svg class="arrow-scroll-icon">
+                            <use xlink:href="./img/sprite.svg#arrow"></use>
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="burgers__content">
+
+                    <div class="burgers__col">
+                        <div class="composition">
+                            <div class="composition__icon">
+                                <svg>
+                                    <use xlink:href="./img/sprite.svg#burger-pic"></use>
+                                </svg>
+                            </div>
+                            <h3 class="composition__title">Состав</h3>
+                        </div>
+
+
+                        <img src="./img/slider-burger-1.png" alt="burger" class="slider-burger__photo">
+
+                        <div class="kkal">
+                            <div class="kkal__icon">
+                                <svg class="kkal__icon-pic">
+                                    <use xlink:href="./img/sprite.svg#kkal"></use>
+                                </svg>
+                                <span class="kkal-number">1200</span>
+                            </div>
+                            <h3 class="kkal__title">ккал</h3>
+                        </div>
+                    </div>
+
+                    <div class="burgers__col">
+                        <h2 class="title burgers_title">Dark beef burger</h2>
+                        <div class="burgers__text">
+                            <p>
+                                Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками
+                                нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с
+                                добавлением экзотического соуса чураско.
+                            </p>
+                        </div>
+
+                        <div class="burgers__order">
+
+                            <div class="price">
+                                <span class="price-number">500</span> 
+                                <span>рублей</span>
+                            </div>
+
+
+
+                        </div>
+                        <a href="#" class="btn btn_orange">Заказать</a>
+
+                    </div>
+
+                </div>
+
+                <div class="burgers__arrow burgers__arrow_right">
+                    <a href="#" class="burgers__arrow-link">
+                        <svg class="arrow-scroll-icon">
+                            <use xlink:href="./img/sprite.svg#arrow"></use>
+                        </svg>
+                    </a>
+                </div>
+-->
+
+
+            </section>
+
+
 
 
             <section class="section team">
@@ -140,7 +327,8 @@
                         <li class="team__item">
                             <button class="team__btn" type="button">Дэниэл Редклиф</button>
                             <div class="team__btn-content">
-                                <div class="team__btn-avatar"> <img src="./img/aphex.jpg" alt="" class="team__btn-pic"></div>
+                                <div class="team__btn-avatar"> <img src="./img/aphex.jpg" alt="" class="team__btn-pic">
+                                </div>
                                 <div class="team__btn-text">
                                     <h3>Оператор</h3>
                                     <p>С радостью поможет подобрать идеальный бургер и оформить заказ.</p>
@@ -151,7 +339,8 @@
                         <li class="team__item team__item_active">
                             <button class="team__btn" type="button">Ричард Джеймс</button>
                             <div class="team__btn-content">
-                                <div class="team__btn-avatar"> <img src="./img/aphex.jpg" alt="" class="team__btn-pic"></div>
+                                <div class="team__btn-avatar"> <img src="./img/aphex.jpg" alt="" class="team__btn-pic">
+                                </div>
                                 <div class="team__btn-text">
                                     <h3>Оператор</h3>
                                     <p>С радостью поможет подобрать идеальный бургер и оформить заказ.</p>
@@ -162,7 +351,8 @@
                         <li class="team__item">
                             <button class="team__btn" type="button">Джейк Финн</button>
                             <div class="team__btn-content">
-                                <div class="team__btn-avatar"> <img src="./img/aphex.jpg" alt="" class="team__btn-pic"></div>
+                                <div class="team__btn-avatar"> <img src="./img/aphex.jpg" alt="" class="team__btn-pic">
+                                </div>
                                 <div class="team__btn-text">
                                     <h3>Оператор</h3>
                                     <p>С радостью поможет подобрать идеальный бургер и оформить заказ.</p>
@@ -173,7 +363,8 @@
                         <li class="team__item">
                             <button class="team__btn" type="button">Николай Иванов</button>
                             <div class="team__btn-content">
-                                <div class="team__btn-avatar"> <img src="./img/aphex.jpg" alt="" class="team__btn-pic"></div>
+                                <div class="team__btn-avatar"> <img src="./img/aphex.jpg" alt="" class="team__btn-pic">
+                                </div>
                                 <div class="team__btn-text">
                                     <h3>Оператор</h3>
                                     <p>С радостью поможет подобрать идеальный бургер и оформить заказ.</p>
@@ -213,23 +404,23 @@
 
                     <li class="our-menu__item our-menu__item_active">
                         <div class="our-menu__content our-menu__content-vegetarian ">
-                            
+
                             <button class="our-menu__btn" type="button">Вегетарианское</button>
-                            
+
                         </div>
 
-                            <div class="our-menu__desc">
-                                Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование
-                                    редуцирует конструктивный механизм сочленений. Лирический субъект начинает
-                                    диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову,
-                                    однако механизм сочленений неустойчив. Модальность высказывания, как справедливо
-                                    считает И.Гальперин, пространственно выбирает метр.
-                                    Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование
-                                    редуцирует конструктивный механизм сочленений. Лирический субъект начинает
-                                    диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову.
-                                
-                            </div>
-                        
+                        <div class="our-menu__desc">
+                            Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование
+                            редуцирует конструктивный механизм сочленений. Лирический субъект начинает
+                            диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову,
+                            однако механизм сочленений неустойчив. Модальность высказывания, как справедливо
+                            считает И.Гальперин, пространственно выбирает метр.
+                            Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование
+                            редуцирует конструктивный механизм сочленений. Лирический субъект начинает
+                            диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову.
+
+                        </div>
+
                     </li>
 
                     <li class="our-menu__item">
@@ -433,7 +624,8 @@
 
                                 <label for="comment" class="form__block">
                                     <div class="form__block-title"> Комментарий</div>
-                                    <textarea name="form__block-comment" id="comment" rows="5" class="form__block-input form__block-input_textarea"></textarea>
+                                    <textarea name="form__block-comment" id="comment" rows="5"
+                                        class="form__block-input form__block-input_textarea"></textarea>
                                 </label>
 
                             </div>
@@ -490,13 +682,13 @@
                     <div class="container footer__container">
                         <div class="footer__col footer__col_left">
                             <div class="footer__address">
-                                        Санкт-Петербург, ул.Бабушкина, д.12/1, 15</div>
+                                Санкт-Петербург, ул.Бабушкина, д.12/1, 15</div>
                             <div class="footer__phone">
                                 <svg class="phone-icon">
-                                    <use xlink:href="./img/sprite.svg#phone" ></use>
+                                    <use xlink:href="./img/sprite.svg#phone"></use>
                                 </svg>
                                 <a class="footer__phone-content" href="tel:+78123771377">+7 (812) 377-13-77 </a>
-                                
+
                             </div>
                         </div>
 
@@ -507,34 +699,34 @@
 
                                         <a href="#" class="socials__item-link">
                                             <svg class="vk-icon">
-                                                <use xlink:href="./img/sprite.svg#vk" ></use>
+                                                <use xlink:href="./img/sprite.svg#vk"></use>
                                             </svg>
                                         </a>
-                                        
+
                                     </li>
 
                                     <li class="socials__item">
                                         <a href="#" class="socials__item-link">
                                             <svg class="fb-icon">
-                                                <use xlink:href="./img/sprite.svg#fb" ></use>
+                                                <use xlink:href="./img/sprite.svg#fb"></use>
                                             </svg>
                                         </a>
-                                        
+
                                     </li>
 
                                     <li class="socials__item">
                                         <a href="#" class="socials__item-link">
                                             <svg class="inst-icon">
-                                                <use xlink:href="./img/sprite.svg#inst" ></use>
+                                                <use xlink:href="./img/sprite.svg#inst"></use>
                                             </svg>
                                         </a>
-                                        
+
                                     </li>
 
                                     <li class="socials__item">
                                         <a href="#" class="socials__item-link">
                                             <svg class="twitter-icon">
-                                                <use xlink:href="./img/sprite.svg#twitter" ></use>
+                                                <use xlink:href="./img/sprite.svg#twitter"></use>
                                             </svg>
                                         </a>
 
@@ -548,6 +740,7 @@
                 </footer>
 
             </section>
+        </div>
 
 
 
@@ -573,6 +766,7 @@
 
 
 
+    <script src="./js/main.js" type="text/javascript"></script>
 </body>
 
 </html>

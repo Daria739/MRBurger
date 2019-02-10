@@ -75,7 +75,8 @@ button {
 
 .section {
     height: 100vh;
-	min-height: 650px;
+    min-height: 650px;
+    min-width: 320px;
 	position: relative;
     display: flex;
     overflow: hidden;

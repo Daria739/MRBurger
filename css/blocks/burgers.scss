@@ -1,0 +1,150 @@
+.burgers {
+    background: -moz-linear-gradient(top, #f9b43b 0%, #eb8c38 50%, #f9b43b 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #f9b43b 0%,#eb8c38 50%,#f9b43b 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #f9b43b 0%,#eb8c38 50%,#f9b43b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    position: relative;
+    background-size: cover;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 650px;
+}
+
+.burgers__container {
+    height: 100%;
+}
+
+.burgers__content {
+    display: flex;
+    align-items: center;
+}
+
+.arrow-scroll-icon {
+    width: 1.8125rem;
+    height: .875rem;
+}
+
+.burgers__item {
+    
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.burgers__img {
+    width: 50%;
+    text-align: center;
+}
+
+
+.burgers__col {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.burgers__col {
+    margin-right: 3%;
+}
+
+.burgers__info {
+    color: #fff;
+}
+
+.burgers__title {
+    line-height: 64px;
+    margin-bottom: 2.5rem;
+}
+
+.burgers__order {
+    display: flex;
+    align-items: baseline;
+}
+
+.burgers__price {
+    color: $orange;
+    font-family: Gagalin;
+    font-size: 30px;
+    margin-right: 1.875rem;
+}
+
+.burgers__price-number {
+    font-size: 72px;
+}
+
+.burgers__desc {
+    font-weight: 300;
+    font-size: .875rem;
+    margin-bottom: 1.5625rem;
+}
+
+.burgers__ingredients {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 5.625rem;
+    height: 5.625rem;
+    background-color: #f08c33;
+    color: #fff;
+    font-family: Gagalin;
+    font-size: .875rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: .3125rem;
+}
+
+.burgers__ingredients-icon {
+    max-width: 46px;
+    max-height: 44px;
+}
+
+.burgers__ingredients-title {
+    font-size: 14px;
+}
+
+.burgers__kkal {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    font-family: Gagalin;
+    color: #fff;
+    opacity: .5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.burgers__kkal-number {
+    background-image: url('/img/kkal.svg');
+    background-repeat: no-repeat;
+    width: 3.75rem;
+    height: 3.75rem;
+    background-position: center;
+    font-size: 1.25rem;
+    line-height: 75px;
+    text-align: center;
+    background-size: contain;
+}
+
+.burgers__kkal-measure {
+    font-size: 14px;
+}
+
+.burgers__arrow-link_left {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(90deg);
+    left: -1.875rem;
+}
+
+.burgers__arrow-link_right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(-90deg);
+    right: -1.875rem;
+}
