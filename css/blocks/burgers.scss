@@ -18,6 +18,7 @@ background: linear-gradient(to bottom, #f9b43b 0%,#eb8c38 50%,#f9b43b 100%); /* 
 .burgers__content {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .arrow-scroll-icon {
@@ -102,12 +103,12 @@ background: linear-gradient(to bottom, #f9b43b 0%,#eb8c38 50%,#f9b43b 100%); /* 
 .burgers__price {
     color: $orange;
     font-family: Gagalin;
-    font-size: 30px;
+    font-size: 1.875rem;
     margin-right: 1.875rem;
 }
 
 .burgers__price-number {
-    font-size: 72px;
+    font-size: 4.5rem;
 }
 
 .burgers__desc {
@@ -143,12 +144,16 @@ background: linear-gradient(to bottom, #f9b43b 0%,#eb8c38 50%,#f9b43b 100%); /* 
 }
 
 .burgers__ingredients-icon {
-    max-width: 46px;
-    max-height: 44px;
+    max-width: 2.875em;
+    max-height: 2.750em;
 }
 
 .burgers__ingredients-title {
-    font-size: 14px;
+    font-size: 0.875rem;
+
+    @include tablets() {
+        font-size: 0.6rem;
+    }
 }
 
 .burgers__ingredients-dropdown {
@@ -219,8 +224,8 @@ background: linear-gradient(to bottom, #f9b43b 0%,#eb8c38 50%,#f9b43b 100%); /* 
 
 
 .dropdown__pic {
-    max-width: 49px;
-    max-height: 39px;
+    max-width: 3.063em;
+    max-height: 2.438em;
     margin-right: 1.25rem;
     width: 100%;
     height: 100%;
@@ -258,19 +263,19 @@ background: linear-gradient(to bottom, #f9b43b 0%,#eb8c38 50%,#f9b43b 100%); /* 
 }
 
 .burgers__kkal-number {
-    background-image: url('/img/kkal.svg');
+    background-image: url('./img/kkal.svg');
     background-repeat: no-repeat;
     width: 3.75rem;
     height: 3.75rem;
     background-position: center;
     font-size: 1.25rem;
-    line-height: 75px;
+    line-height: 4.688em;
     text-align: center;
     background-size: contain;
 }
 
 .burgers__kkal-measure {
-    font-size: 14px;
+    font-size: 0.875em;
 }
 
 
@@ -281,7 +286,7 @@ background: linear-gradient(to bottom, #f9b43b 0%,#eb8c38 50%,#f9b43b 100%); /* 
     left: -1.875rem;
 
     @include tablets() {
-        left: 0;
+       left: -1rem;
     }
 }
 
@@ -292,6 +297,6 @@ background: linear-gradient(to bottom, #f9b43b 0%,#eb8c38 50%,#f9b43b 100%); /* 
     right: -1.875rem;
 
     @include tablets() {
-        right: 0;
+        right: -1rem;
     }
 }
