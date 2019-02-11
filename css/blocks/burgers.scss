@@ -95,6 +95,7 @@ background: linear-gradient(to bottom, #f9b43b 0%,#eb8c38 50%,#f9b43b 100%); /* 
     align-items: center;
     justify-content: center;
     border-radius: .3125rem;
+    transition-duration: .2s;
 }
 
 .burgers__ingredients-icon {
@@ -104,6 +105,67 @@ background: linear-gradient(to bottom, #f9b43b 0%,#eb8c38 50%,#f9b43b 100%); /* 
 
 .burgers__ingredients-title {
     font-size: 14px;
+}
+
+.burgers__ingredients-dropdown {
+    opacity: 0;
+    display: flex;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    background-color: rgba(255,255,255, 0.9);
+    border-radius: .5em;
+    padding: 1.25rem;
+    width: 16.875rem;
+    transition-duration: .2s;
+}
+
+.burgers__ingredients:hover {
+    cursor: pointer;
+    background-color: $orange;
+
+    .burgers__ingredients-dropdown {
+        opacity: 1;
+    }
+}
+
+
+
+
+.dropdown__list {
+    width: 100%;
+}
+
+.dropdown__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #2f3234;
+    text-align: left;
+    font-family: Ubuntu;
+    font-weight: 300;
+    font-size: .875rem;
+    margin-bottom: 5%;
+}
+
+.dropdown__item:last-child {
+    margin-bottom: 0;
+}
+
+
+.dropdown__name {
+    flex: 1;
+    font-weight: 500;
+    margin-right: .6rem;
+}
+
+.dropdown__pic {
+    max-width: 49px;
+    max-height: 39px;
+    margin-right: 1.25rem;
+}
+
+.dropdown-pic {
 }
 
 .burgers__kkal {
