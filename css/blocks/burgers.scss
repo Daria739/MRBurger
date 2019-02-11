@@ -31,11 +31,29 @@ background: linear-gradient(to bottom, #f9b43b 0%,#eb8c38 50%,#f9b43b 100%); /* 
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @include tablets() {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
 }
 
 .burgers__img {
     width: 50%;
     text-align: center;
+
+    @include tablets () {
+        width: 100%;
+    }
+}
+
+.burgers__img-pic {
+    @include tablets() {
+        width: 70%;
+    }
 }
 
 
@@ -43,15 +61,27 @@ background: linear-gradient(to bottom, #f9b43b 0%,#eb8c38 50%,#f9b43b 100%); /* 
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-right: 3%;
+
+    @include tablets() {
+        width: 100%;
+    }
 }
 
-.burgers__col {
-    margin-right: 3%;
+.burgers__col_right {
+    @include tablets() {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 .burgers__info {
     color: #fff;
+
 }
+
 
 .burgers__title {
     line-height: 64px;
@@ -61,7 +91,13 @@ background: linear-gradient(to bottom, #f9b43b 0%,#eb8c38 50%,#f9b43b 100%); /* 
 .burgers__order {
     display: flex;
     align-items: baseline;
+
+    @include tablets() {
+        justify-content: center;
+    }
 }
+
+
 
 .burgers__price {
     color: $orange;
@@ -78,6 +114,9 @@ background: linear-gradient(to bottom, #f9b43b 0%,#eb8c38 50%,#f9b43b 100%); /* 
     font-weight: 300;
     font-size: .875rem;
     margin-bottom: 1.5625rem;
+    @include tablets(){
+        max-width: 565px;
+    }
 }
 
 .burgers__ingredients {
@@ -96,6 +135,11 @@ background: linear-gradient(to bottom, #f9b43b 0%,#eb8c38 50%,#f9b43b 100%); /* 
     justify-content: center;
     border-radius: .3125rem;
     transition-duration: .2s;
+
+    @include tablets() {
+        top: .6rem;
+        bottom: auto;
+    }
 }
 
 .burgers__ingredients-icon {
@@ -118,6 +162,11 @@ background: linear-gradient(to bottom, #f9b43b 0%,#eb8c38 50%,#f9b43b 100%); /* 
     padding: 1.25rem;
     width: 16.875rem;
     transition-duration: .2s;
+
+    @include tablets() {
+        width: 20rem;
+    }
+    
 }
 
 .burgers__ingredients:hover {
@@ -146,6 +195,11 @@ background: linear-gradient(to bottom, #f9b43b 0%,#eb8c38 50%,#f9b43b 100%); /* 
     font-weight: 300;
     font-size: .875rem;
     margin-bottom: 5%;
+
+    
+    @include tablets() {
+        justify-content: space-around;
+    }
 }
 
 .dropdown__item:last-child {
@@ -159,13 +213,28 @@ background: linear-gradient(to bottom, #f9b43b 0%,#eb8c38 50%,#f9b43b 100%); /* 
     margin-right: .6rem;
 }
 
+.dropdown__weight {
+    margin-right: 3em;
+}
+
+
 .dropdown__pic {
     max-width: 49px;
     max-height: 39px;
     margin-right: 1.25rem;
+    width: 100%;
+    height: 100%;
 }
 
-.dropdown-pic {
+.dropdown__close {
+    display: none;
+    @include tablets() {
+        display: block;
+        position: absolute;
+        top: 3%;
+        right: 3%;
+    }
+
 }
 
 .burgers__kkal {
@@ -178,6 +247,13 @@ background: linear-gradient(to bottom, #f9b43b 0%,#eb8c38 50%,#f9b43b 100%); /* 
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @include tablets() {
+        right: 0;
+        top: .6rem;
+        left: auto;
+        bottom: auto;
+    }
 
 }
 
@@ -197,11 +273,16 @@ background: linear-gradient(to bottom, #f9b43b 0%,#eb8c38 50%,#f9b43b 100%); /* 
     font-size: 14px;
 }
 
+
 .burgers__arrow-link_left {
     position: absolute;
     top: 50%;
     transform: translateY(-50%) rotate(90deg);
     left: -1.875rem;
+
+    @include tablets() {
+        left: 0;
+    }
 }
 
 .burgers__arrow-link_right {
@@ -209,4 +290,8 @@ background: linear-gradient(to bottom, #f9b43b 0%,#eb8c38 50%,#f9b43b 100%); /* 
     top: 50%;
     transform: translateY(-50%) rotate(-90deg);
     right: -1.875rem;
+
+    @include tablets() {
+        right: 0;
+    }
 }
