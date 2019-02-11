@@ -87,6 +87,11 @@ background: linear-gradient(to bottom, #f9b43b 0%,#eb8c38 50%,#f9b43b 100%); /* 
 .burgers__title {
     line-height: 64px;
     margin-bottom: 2.5rem;
+
+    @include tablets() {
+        font-size: 4rem;
+        margin-bottom: 1.5rem;
+    }
 }
 
 .burgers__order {
@@ -146,14 +151,11 @@ background: linear-gradient(to bottom, #f9b43b 0%,#eb8c38 50%,#f9b43b 100%); /* 
 .burgers__ingredients-icon {
     max-width: 2.875em;
     max-height: 2.750em;
+    width: 100%;
 }
 
 .burgers__ingredients-title {
     font-size: 0.875rem;
-
-    @include tablets() {
-        font-size: 0.6rem;
-    }
 }
 
 .burgers__ingredients-dropdown {
@@ -263,15 +265,18 @@ background: linear-gradient(to bottom, #f9b43b 0%,#eb8c38 50%,#f9b43b 100%); /* 
 }
 
 .burgers__kkal-number {
-    background-image: url('./img/kkal.svg');
+    background-image: url('../img/kkal.svg');
     background-repeat: no-repeat;
     width: 3.75rem;
     height: 3.75rem;
     background-position: center;
     font-size: 1.25rem;
-    line-height: 4.688em;
+    padding-top:25%;
     text-align: center;
-    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .burgers__kkal-measure {
