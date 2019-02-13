@@ -5,7 +5,14 @@ function openMenu() {
     const menu = document.querySelector('.menu-burger-mobile');
     const closeBtn = document.querySelector('.menu-burger-mobile-close');
     let opacity = 0.2;
-    const menuItem = menuItemClose.querySelectorAll('.menu-burger-mobile__item');
+    const menuItem = document.querySelectorAll('.menu-burger-mobile__item');
+
+    for (let i = 0; i < menuItem.length; i++) {
+		menuItem[i].addEventListener('click', function () {		
+        menu.classList.remove('menu-burger-mobile_active');		
+		}						
+		
+	});
 
     openBtn.addEventListener('click', function() {
        menu.classList.add('menu-burger-mobile_active');
@@ -57,18 +64,7 @@ function openMenu() {
 
 
     
-    menuItem.addEventListener('click', function(){
-        setTimeout (function fooC(){
-            if (opacity > 0) {
-                opacity -= 0.2;
-                menu.style.opacity = opacity;
-                setTimeout (fooC, 80);
-            } else {
-                
-            menu.classList.remove('menu-burger-mobile_active');
-            }
-        }, 80);
-    });
+
 
 }
 
