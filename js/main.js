@@ -1,18 +1,10 @@
 // Всплывающее меню //
 
-function openMenu() {
     const openBtn = document.querySelector('.menu-burger');
     const menu = document.querySelector('.menu-burger-mobile');
     const closeBtn = document.querySelector('.menu-burger-mobile-close');
     let opacity = 0.2;
     const menuItem = document.querySelectorAll('.menu-burger-mobile__item');
-
-    for (let i = 0; i < menuItem.length; i++) {
-		menuItem[i].addEventListener('click', function () {		
-        menu.classList.remove('menu-burger-mobile_active');		
-		}						
-		
-	});
 
     openBtn.addEventListener('click', function() {
        menu.classList.add('menu-burger-mobile_active');
@@ -24,9 +16,23 @@ function openMenu() {
                menu.style.opacity = opacity;
                setTimeout (foo, 80);
            }
+
+           
        }, 80);
 
+       
+
     });
+
+    for (let i = 0; i < menuItem.length; i++) {
+		menuItem[i].addEventListener('click', function () {		
+        menu.classList.remove('menu-burger-mobile_active');		
+		}						
+		
+	)};
+
+
+
 
 
     closeBtn.addEventListener('click', function() {
@@ -43,6 +49,10 @@ function openMenu() {
 
 
     });
+
+
+
+
     
 
 
@@ -66,6 +76,4 @@ function openMenu() {
     
 
 
-}
 
-openMenu()
