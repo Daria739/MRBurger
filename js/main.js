@@ -32,9 +32,6 @@
 	)};
 
 
-
-
-
     closeBtn.addEventListener('click', function() {
         setTimeout (function fooC(){
             if (opacity > 0) {
@@ -49,14 +46,6 @@
 
 
     });
-
-
-
-
-    
-
-
-
 
     document.addEventListener('keydown', function(e) {
 
@@ -73,7 +62,182 @@
     });
 
 
-    
 
 
 
+
+// Вертикальный аккордеон //
+
+
+const items = document.querySelectorAll('.team__item');
+
+for (const item of items) {
+    item.addEventListener('click', e => {
+        const curItem = e.currentTarget;
+        const content = curItem.querySelector('.team__btn-content');
+        
+        if(curItem.classList.contains('active')) { //пункт открыт
+            curItem.classList.remove('active');
+            content.style.height = 0;
+        } else {
+
+            Array.from(items).forEach(elem =>{
+                elem.classList.remove('active');
+                elem.querySelector('.team__btn-content').style.height = 0;
+            })
+
+            curItem.classList.add('active');
+            content.style.height = '100%';
+        }
+
+
+
+
+    });
+}
+
+
+
+
+//Горизонтальный аккордеон
+
+
+
+const menuList = document.querySelector('.our-menu__list');
+const menuItems = menuList.querySelectorAll('.our-menu__item');
+
+for (const menuItem of menuItems) {
+	menuItem.addEventListener("click", eventHandlerMenu);
+}
+
+function eventHandlerMenu(e) {
+	const item = e.currentTarget;
+	const content = item.querySelector('.our-menu__desc');
+
+	if (item.classList.contains('active')) {
+        item.classList.remove('active');
+        content.style.width = 0;
+	} else {
+        item.classList.add('active');
+        content.style.width = '85%';
+
+	}
+}
+
+
+
+
+
+// Слайдер
+
+
+const leftBtn = document.querySelector('.burgers__arrow-link_left');
+const rightBtn = document.querySelector('.burgers__arrow-link_right');
+const sliderItem = document.querySelector('.burgers__list');
+
+//const step = 1025;
+const step = sliderItem.firstElementChild.getBoundingClientRect().width;
+//const maxRight = 3900;
+const maxRight = (sliderItem.children.length - 1) * step; // 1 - количество слайдов, которые помещаются в экран
+const minRight = 0;
+let currentRight = 0;
+
+
+
+rightBtn.addEventListener('click', e => {
+    e.preventDefault();
+    if(currentRight < maxRight) {
+        currentRight += step;
+        sliderItem.style.right = `${currentRight}px`;
+    } else {
+        currentRight = 0;
+        sliderItem.style.right = `${currentRight}px`;
+    }
+});
+
+leftBtn.addEventListener('click', e => {
+    e.preventDefault();
+    if(currentRight > minRight) {
+        currentRight -= step;
+        sliderItem.style.right = `${currentRight}px`;
+    } else {
+        currentRight = maxRight;
+        sliderItem.style.right = `${currentRight}px`;
+    }
+});
+
+
+// Модальное окно
+
+const button = document.querySelector('.js-open-btn');
+const template = document.querySelector('#modal-template').innerHTML;
+//const popup = document.querySelector('.modal');
+//const close = document.querySelector('#close-btn');
+
+const contentWrap = button.parentNode;
+
+const title = contentWrap.querySelector('.reviews__title').innerHTML;
+const text = contentWrap.querySelector('.reviews__text').innerHTML;
+
+const modal = createModal();
+
+button.addEventListener('click', e => {
+    modal.setContent(title, text);
+    modal.open()
+});
+
+function createModal() {
+    const container = document.createElement('div');
+    container.className = 'popup';
+    container.innerHTML = template;
+
+    const contentBlock = container.querySelector('.popup__content');
+    const contentTitle = container.querySelector('.popup__title');
+    const contentText = container.querySelector('.popup__text');
+
+
+    const closeBtn = container.querySelector(".modal__cross");
+    closeBtn.addEventListener("click", e => {
+      document.body.removeChild(container);
+    });
+
+
+
+    const overlay = container.querySelector('.overlay');
+
+    overlay.addEventListener("click", e => {
+        document.body.removeChild(container);
+      });
+
+    return {
+        open() {
+            document.body.appendChild(container);
+        },
+        close() {
+            closeBtn.click();
+        },
+        setContent(title, text) {
+            contentTitle.innerHTML = title;
+            contentText.innerHTML = text;
+        }
+    }
+}
+
+
+
+/*const popupBlock = document.createElement('div');
+popupBlock.className = 'popup';
+
+const overlay = document.createElement('div');
+overlay.className = 'overlay';
+
+popupBlock.appendChild(overlay);
+console.log(popupBlock);*/
+
+/*button.addEventListener('click', e => {
+popup.classList.add('opened');
+});
+
+close.addEventListener('click', e=> {
+    popup.classList.remove('opened');
+}); */

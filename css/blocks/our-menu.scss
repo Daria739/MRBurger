@@ -10,14 +10,151 @@
     }
 }
 
-.our-menu__list {
+
+
+.accordeon__wrap {
     position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    width: auto;
     display: flex;
     justify-content: flex-end;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.our-menu__list {
+    display: flex;
+    height: 100%;
+}
+
+.our-menu__item {
+    display: flex;
+    height: 100%;
+    cursor: pointer;
+}
+
+.accordeon__wrap {
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.our-menu__content {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    width: 6rem;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    position: relative;
+    cursor: pointer;
+}
+
+.our-menu__content-meet {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url('../img/our-menu-burger-1.jpg');
+    
+}
+
+.our-menu__content-vegetarian {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url('../img/our-menu-burger-2.jpg');
+}
+
+.our-menu__content-diet {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url('../img/our-menu-burger-3.jpg');
+}
+
+
+
+.our-menu__item.active .our-menu__desc {
+    max-width: 33.75rem;
+}
+
+.our-menu__desc {
+    width: 0rem;
+    overflow: hidden;
+    background: rgba(47,50,52,.93);
+    
+    
+}
+
+
+
+
+
+.our-menu__btn {
+    transform: rotate(270deg);
+    font-family: Gagalin;
+    font-size: 2.5rem;
+    color: #fff;
+    transform-origin: 2.1875rem 2.1875rem;
+    border-style: none;
+    outline: none;
+    min-width: 17.5rem;
+    width: 98vh;
+    text-align: left;
+    padding-top: 0.625rem;
+    padding-bottom: 1.25rem;
+    padding-left: 2.8125rem;
+
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    display: inline-block;
+    line-height: 80px;
+
+    &:hover {
+        color: $yellow;
+    }
+}
+
+.our-menu__item.active {
+
+    .our-menu__desc {
+        background: rgba(47,50,52,.93);
+        height: 100%;
+        overflow: hidden;
+        
+        font-weight: 300;
+        line-height: 1.5rem;
+        opacity: .93;
+        background: #333231;
+        color: #fff;
+        font-size: 0.875rem;
+        padding: 3.125em 1.563em;
+        
+        @include tablets() {
+            font-size: 0.75rem;
+            line-height: 1.3rem;
+        }
+
+        @include phones() {
+            font-size: 0.65rem;
+            line-height: 1.25rem;
+        }
+        
+    }
+
+    .our-menu__btn {
+        color: $yellow;
+    }
+}
+
+
+/*
+.our-menu__list {
+
+    display: flex;
     height: 100%;
     max-width: 70%;
 
@@ -60,9 +197,10 @@
     bottom: 0;
 }
 
+
 .our-menu__item {
     display: flex;
-    flex-wrap: nowrap;
+    height: 100%;
 }
 
 .our-menu__btn:hover {
@@ -86,7 +224,7 @@ height: 0;
 overflow: hidden;
 }
 
-.our-menu__item_active {
+.our-menu__item.active {
 
     .our-menu__desc {
         background: rgba(47,50,52,.93);
@@ -117,3 +255,6 @@ overflow: hidden;
         color: $yellow;
     }
 }
+
+
+}*/
