@@ -244,7 +244,7 @@ const orderBtn = myForm.querySelector('.js-btn-sumbit');
 const clearBtn = myForm.querySelector('.js-btn-reset');
 
 
-orderBtn.addEventListener('click', e=>{
+myForm.addEventListener('submit', e=>{
     event.preventDefault();
 
     if (validateForm(myForm)) {
