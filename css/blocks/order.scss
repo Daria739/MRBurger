@@ -63,6 +63,9 @@
     margin-bottom: 1.25em;
 
 }
+.form__row-radio {
+    justify-content: flex-start;
+}
 
 .form__row:last-child {
     margin-bottom: 0;
@@ -235,20 +238,27 @@ textarea {
 .form__row-btns {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .form__row-check {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .form__row-radio {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
 }
+
+.error {
+    font-size: 0.97em; 
+    font-weight: 300;
+    color: red;
+}
+
 
 
 

@@ -1020,7 +1020,7 @@
 
                     <li class="reviews__item" style="background-image: url(./img/photo-3.jpg)">
                         <div class="reviews__item-hover">
-                            <h3 class="reviews__title">Андрей Иванов</h3>
+                            <h3 class="reviews__title">Анна Максимова</h3>
 
                             <p class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно
                                 забыть... Никогда не
@@ -1116,12 +1116,14 @@
 
                                 <label for="name" class="form__block">
                                     <div class="form__block-title">Имя</div>
-                                    <input type="text" class="form__block-input" id="name" required>
+                                    <input type="text" class="form__block-input" name="name" required>
+                                    <div class="error"></div>
                                 </label>
 
                                 <label for="phone" class="form__block">
                                     <div class="form__block-title">Телефон</div>
-                                    <input type="text" class="form__block-input" id="phone" required>
+                                    <input type="text" class="form__block-input" name="phone" required>
+                                    <div class="error"></div>
                                 </label>
 
                             </div>
@@ -1130,7 +1132,7 @@
 
                                 <label for="street" class="form__block">
                                     <div class="form__block-title">Улица</div>
-                                    <input type="text" class="form__block-input" id="street">
+                                    <input type="text" class="form__block-input" name="street">
                                 </label>
 
                             </div>
@@ -1140,22 +1142,22 @@
 
                                 <label for="house-number" class="form__block">
                                     <div class="form__block-title">Дом</div>
-                                    <input type="text" class="form__block-input" id="house-number">
+                                    <input type="text" class="form__block-input" name="house-number">
                                 </label>
 
                                 <label for="block-number" class="form__block">
                                     <div class="form__block-title">Корпус</div>
-                                    <input type="text" class="form__block-input" id="block-number">
+                                    <input type="text" class="form__block-input" name="block-number">
                                 </label>
 
                                 <label for="appartement" class="form__block">
                                     <div class="form__block-title">Квартира</div>
-                                    <input type="text" class="form__block-input" id="appartement">
+                                    <input type="text" class="form__block-input" name="appartement">
                                 </label>
 
                                 <label for="floor" class="form__block">
                                     <div class="form__block-title">Этаж</div>
-                                    <input type="text" class="form__block-input" id="floor">
+                                    <input type="text" class="form__block-input" name="floor">
                                 </label>
 
                             </div>
@@ -1168,8 +1170,9 @@
 
                                 <label for="comment" class="form__block">
                                     <div class="form__block-title"> Комментарий</div>
-                                    <textarea name="form__block-comment" id="comment" rows="5"
+                                    <textarea name="comment" rows="5"
                                         class="form__block-input form__block-input_textarea" required></textarea>
+                                        <div class="error"></div>
                                 </label>
 
                             </div>
@@ -1209,8 +1212,8 @@
                             </div>
 
                             <div class="form__row form__row-btns">
-                                <button type="submit" href="#" class="btn btn-submit">Заказать</button>
-                                <button type="reset" href="#" class="btn btn-reset">Очистить</button>
+                                <button type="submit" href="#" class="btn btn-submit js-btn-sumbit">Заказать</button>
+                                <button type="reset" href="#" class="btn btn-reset js-btn-reset">Очистить</button>
                             </div>
 
                         </div>

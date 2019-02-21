@@ -236,40 +236,81 @@ function createModal() {
     }
 }
 
-
-/*
-const button = document.querySelector('.js-open-btn');
-const template = document.querySelector('#modal-template').innerHTML;
-//const popup = document.querySelector('.modal');
-//const close = document.querySelector('#close-btn');
-
-const title = contentWrap.querySelector('.reviews__title').innerHTML;
-const text = contentWrap.querySelector('.reviews__text').innerHTML;
-
-const modal = createModal();
-
-button.addEventListener('click', e => {
-    modal.setContent(title, text);
-    modal.open()
-});*/
+// Форма заказа
 
 
+const myForm = document.querySelector('.form');
+const orderBtn = myForm.querySelector('.js-btn-sumbit');
+const clearBtn = myForm.querySelector('.js-btn-reset');
 
 
+orderBtn.addEventListener('click', e=>{
+    event.preventDefault();
 
-/*const popupBlock = document.createElement('div');
-popupBlock.className = 'popup';
+    if (validateForm(myForm)) {
+        const name = myForm.elements.name.value;
+        const phone = myForm.elements.phone.value;
+        const comment = myForm.elements.comment.value;
+        const to = 'juicebox739@gmail.com';
+        var formData = new FormData();
+            formData.append('name',name);
+            formData.append('phone', phone);
+            formData.append('comment', comment);
+            formData.append('to', to);
+            console.log(formData);
+            const xhr = new XMLHttpRequest();
+            xhr.responseType = 'json';
+            xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
+            xhr.send(formData);
+            xhr.addEventListener('load', e =>{
 
-const overlay = document.createElement('div');
-overlay.className = 'overlay';
-
-popupBlock.appendChild(overlay);
-console.log(popupBlock);*/
-
-/*button.addEventListener('click', e => {
-popup.classList.add('opened');
+                if (xhr.response.status){
+                    const response = 'Заказ оформлен';
+                        modal.setContent('', response);
+                        modal.open();
+                        setTimeout(e=>{
+                            clearBtn.click();
+                            modal.close();
+                        },1500);
+                        
+                } else {
+                    const rejected = 'Заказ не оформлен';
+                    modal.setContent('',rejected);
+                    modal.open();
+                    clearBtn.click();
+                }
+                
+            });
+    }
 });
 
-close.addEventListener('click', e=> {
-    popup.classList.remove('opened');
-}); */
+function validateForm(myForm) {
+    let valid = true;
+    
+    if (!validateField(myForm.elements.name)) {
+        valid = false;
+    }
+
+    if (!validateField(myForm.elements.phone)) {
+        valid = false;
+    }
+
+    if (!validateField(myForm.elements.comment)) {
+        valid = false;
+    }
+    return valid;
+};
+
+
+function validateField(field) {
+    if (!field.checkValidity()){
+        field.nextElementSibling.textContent = field.validationMessage;
+        return false;
+    }
+    else {
+        field.nextElementSibling.textContent = '';
+        return true;
+    }
+};
+
+
