@@ -201,13 +201,13 @@ function createModal() {
     container.innerHTML = 'template';
 
     const contentBlock = container.querySelector('.popup__content');
-    contentBlock.appendChild(content);
+    //contentBlock.appendChild(content);
 
     const contentTitle = container.querySelector('.popup__title');
     const contentText = container.querySelector('.popup__text');
 
 
-    const closeBtn = container.querySelector('#close-btn');
+    const closeBtn = document.querySelector('#close-btn');
 
     closeBtn.addEventListener('click', e => {
         document.body.removeChild(container);
