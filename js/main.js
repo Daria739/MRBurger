@@ -197,8 +197,9 @@ for (let i = 0; i < button.length; i++) {
 
 function createModal() {
     const container = document.createElement('div');
+    const template = document.querySelector('#modal-template').innerHTML;
     container.className = 'popup';
-    container.innerHTML = 'template';
+    container.innerHTML = template;
 
     const contentBlock = container.querySelector('.popup__content');
     //contentBlock.appendChild(content);
@@ -207,7 +208,7 @@ function createModal() {
     const contentText = container.querySelector('.popup__text');
 
 
-    const closeBtn = document.querySelector('#close-btn');
+    const closeBtn = container.querySelector('#close-btn');
 
     closeBtn.addEventListener('click', e => {
         document.body.removeChild(container);
