@@ -1,65 +1,66 @@
 // Всплывающее меню //
 
-    const openBtn = document.querySelector('.menu-burger');
-    const menu = document.querySelector('.menu-burger-mobile');
-    const closeBtn = document.querySelector('.menu-burger-mobile-close');
-    let opacity = 0.2;
-    const menuItem = document.querySelectorAll('.menu-burger-mobile__item');
+const openBtn = document.querySelector('.menu-burger');
+const menu = document.querySelector('.menu-burger-mobile');
+const closeBtn = document.querySelector('.menu-burger-mobile-close');
+let opacity = 0.2;
+const menuItem = document.querySelectorAll('.menu-burger-mobile__item');
 
-    openBtn.addEventListener('click', function() {
-       menu.classList.add('menu-burger-mobile_active');
-       menu.style.opacity = 0;
+openBtn.addEventListener('click', function () {
+    menu.classList.add('menu-burger-mobile_active');
+    menu.style.opacity = 0;
 
-       setTimeout(function foo() {
-           if (opacity < 1) {
-               opacity += 0.2;
-               menu.style.opacity = opacity;
-               setTimeout (foo, 80);
-           }
-
-           
-       }, 80);
-
-       
-
-    });
-
-    for (let i = 0; i < menuItem.length; i++) {
-		menuItem[i].addEventListener('click', function () {		
-        menu.classList.remove('menu-burger-mobile_active');		
-		}						
-		
-	)};
+    setTimeout(function foo() {
+        if (opacity < 1) {
+            opacity += 0.2;
+            menu.style.opacity = opacity;
+            setTimeout(foo, 80);
+        }
 
 
-    closeBtn.addEventListener('click', function() {
-        setTimeout (function fooC(){
-            if (opacity > 0) {
-                opacity -= 0.2;
-                menu.style.opacity = opacity;
-                setTimeout (fooC, 80);
-            } else {
-                
-            menu.classList.remove('menu-burger-mobile_active');
-            }
-        }, 80);
+    }, 80);
 
 
-    });
 
-    document.addEventListener('keydown', function(e) {
+});
 
-        setTimeout (function fooC() {
-        if(e.keyCode === 27) {
+for (let i = 0; i < menuItem.length; i++) {
+    menuItem[i].addEventListener('click', function () {
+        menu.classList.remove('menu-burger-mobile_active');
+    }
+
+    )
+};
+
+
+closeBtn.addEventListener('click', function () {
+    setTimeout(function fooC() {
+        if (opacity > 0) {
             opacity -= 0.2;
             menu.style.opacity = opacity;
-            setTimeout (fooC, 80);
+            setTimeout(fooC, 80);
+        } else {
+
+            menu.classList.remove('menu-burger-mobile_active');
+        }
+    }, 80);
+
+
+});
+
+document.addEventListener('keydown', function (e) {
+
+    setTimeout(function fooC() {
+        if (e.keyCode === 27) {
+            opacity -= 0.2;
+            menu.style.opacity = opacity;
+            setTimeout(fooC, 80);
         } else {
             menu.classList.remove('menu-burger-mobile_active');
         }
     }, 80);
 
-    });
+});
 
 
 
@@ -75,13 +76,13 @@ for (const item of items) {
     item.addEventListener('click', e => {
         const curItem = e.currentTarget;
         const content = curItem.querySelector('.team__btn-content');
-        
-        if(curItem.classList.contains('active')) { //пункт открыт
+
+        if (curItem.classList.contains('active')) { //пункт открыт
             curItem.classList.remove('active');
             content.style.height = 0;
         } else {
 
-            Array.from(items).forEach(elem =>{
+            Array.from(items).forEach(elem => {
                 elem.classList.remove('active');
                 elem.querySelector('.team__btn-content').style.height = 0;
             })
@@ -103,25 +104,32 @@ for (const item of items) {
 
 
 
-const menuList = document.querySelector('.our-menu__list');
-const menuItems = menuList.querySelectorAll('.our-menu__item');
+
+const menuItems = document.querySelectorAll('.our-menu__item');
 
 for (const menuItem of menuItems) {
-	menuItem.addEventListener("click", eventHandlerMenu);
-}
+    menuItem.addEventListener('click', e => {
+        const curMenuItem = e.currentTarget;
+        const contentMenu = curMenuItem.querySelector('.our-menu__desc');
 
-function eventHandlerMenu(e) {
-	const item = e.currentTarget;
-	const content = item.querySelector('.our-menu__desc');
+        if (curMenuItem.classList.contains('active')) { //пункт открыт
+            curMenuItem.classList.remove('active');
+            contentMenu.style.width = 0;
+        } else {
 
-	if (item.classList.contains('active')) {
-        item.classList.remove('active');
-        content.style.width = 0;
-	} else {
-        item.classList.add('active');
-        content.style.width = '85%';
+            Array.from(menuItems).forEach(elem => {
+                elem.classList.remove('active');
+                elem.querySelector('.our-menu__desc').style.width = 0;
+            })
 
-	}
+            curMenuItem.classList.add('active');
+            contentMenu.style.width = '100%';
+        }
+
+
+
+
+    });
 }
 
 
@@ -136,7 +144,7 @@ const rightBtn = document.querySelector('.burgers__arrow-link_right');
 const sliderItem = document.querySelector('.burgers__list');
 
 //const step = 1025;
-const step = sliderItem.firstElementChild.getBoundingClientRect().width;
+let step = sliderItem.firstElementChild.getBoundingClientRect().width;
 //const maxRight = 3900;
 const maxRight = (sliderItem.children.length - 1) * step; // 1 - количество слайдов, которые помещаются в экран
 const minRight = 0;
@@ -146,7 +154,7 @@ let currentRight = 0;
 
 rightBtn.addEventListener('click', e => {
     e.preventDefault();
-    if(currentRight < maxRight) {
+    if (currentRight < maxRight) {
         currentRight += step;
         sliderItem.style.right = `${currentRight}px`;
     } else {
@@ -157,7 +165,7 @@ rightBtn.addEventListener('click', e => {
 
 leftBtn.addEventListener('click', e => {
     e.preventDefault();
-    if(currentRight > minRight) {
+    if (currentRight > minRight) {
         currentRight -= step;
         sliderItem.style.right = `${currentRight}px`;
     } else {
@@ -169,45 +177,49 @@ leftBtn.addEventListener('click', e => {
 
 // Модальное окно
 
-const button = document.querySelector('.js-open-btn');
-const template = document.querySelector('#modal-template').innerHTML;
-//const popup = document.querySelector('.modal');
-//const close = document.querySelector('#close-btn');
 
-const contentWrap = button.parentNode;
-
-const title = contentWrap.querySelector('.reviews__title').innerHTML;
-const text = contentWrap.querySelector('.reviews__text').innerHTML;
+const button = document.querySelectorAll('.js-open-btn');
 
 const modal = createModal();
 
-button.addEventListener('click', e => {
-    modal.setContent(title, text);
-    modal.open()
-});
+for (let i = 0; i < button.length; i++) {
+    button[i].addEventListener('click', e => {
+        const thisBtn = e.currentTarget;
+        contentWrap = thisBtn.parentNode;
+        const title = contentWrap.querySelector('.reviews__title').innerHTML;
+        const text = contentWrap.querySelector('.reviews__text').innerHTML;
+        modal.setContent(title, text);
+        modal.open();
+
+    });
+}
+
 
 function createModal() {
     const container = document.createElement('div');
     container.className = 'popup';
-    container.innerHTML = template;
+    container.innerHTML = 'template';
 
     const contentBlock = container.querySelector('.popup__content');
+    contentBlock.appendChild(content);
+
     const contentTitle = container.querySelector('.popup__title');
     const contentText = container.querySelector('.popup__text');
 
 
-    const closeBtn = container.querySelector(".modal__cross");
-    closeBtn.addEventListener("click", e => {
-      document.body.removeChild(container);
+    const closeBtn = container.querySelector('#close-btn');
+
+    closeBtn.addEventListener('click', e => {
+        document.body.removeChild(container);
     });
-
-
 
     const overlay = container.querySelector('.overlay');
 
-    overlay.addEventListener("click", e => {
+    overlay.addEventListener('click', e => {
         document.body.removeChild(container);
-      });
+    });
+
+
 
     return {
         open() {
@@ -222,6 +234,25 @@ function createModal() {
         }
     }
 }
+
+
+/*
+const button = document.querySelector('.js-open-btn');
+const template = document.querySelector('#modal-template').innerHTML;
+//const popup = document.querySelector('.modal');
+//const close = document.querySelector('#close-btn');
+
+const title = contentWrap.querySelector('.reviews__title').innerHTML;
+const text = contentWrap.querySelector('.reviews__text').innerHTML;
+
+const modal = createModal();
+
+button.addEventListener('click', e => {
+    modal.setContent(title, text);
+    modal.open()
+});*/
+
+
 
 
 
