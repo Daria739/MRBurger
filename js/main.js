@@ -313,4 +313,154 @@ function validateField(field) {
     }
 };
 
+// Смена экранов
 
+
+const sections = $('.section');
+const display = $('.maincontent');
+let inScroll = false;
+
+const switchActiveClassInSideMenu = menuItemIndex => {
+    $('.points__item')
+        .eq(menuItemIndex)
+        .addClass('active')
+        .siblings()
+        .removeClass('active');
+}
+
+const performTransition = sectionEq => { //управление анимацей
+    if(inScroll) return;
+
+    inScroll = true;
+
+    const position = sectionEq * -100 + '%';
+
+    sections
+    .eq(sectionEq)
+    .addClass('active')
+    .siblings()
+    .removeClass('active');
+
+    display.css({
+        'transform': `translateY(${position})`
+    });
+
+    setTimeout(() => {
+        inScroll = false;
+        switchActiveClassInSideMenu(sectionEq);
+
+    }, 1000 + 300);
+    
+
+};
+
+const scrollToSection = direction => {
+    const activeSection = sections.filter('.active');
+    const nextSection = activeSection.next();
+    const prevSection = activeSection.prev();
+
+    if (direction === 'next' && nextSection.length) {
+        performTransition(nextSection.index());
+    }
+
+    if (direction === 'prev' && prevSection.length) {
+        performTransition(prevSection.index());
+    }
+
+
+};
+
+
+
+
+
+
+$('.wrapper').on('wheel', e =>{
+    const deltaY = e.originalEvent.deltaY;
+
+    if(deltaY > 0) {
+        scrollToSection('next');
+    }
+
+    if(deltaY < 0) {
+     scrollToSection('prev');
+    }
+
+});
+
+$(document).on('keydown', e => {
+    switch(e.keyCode) {
+        case 38: scrollToSection('prev'); break;
+        case 40: scrollToSection('next'); break;
+    }
+});
+
+$('[data-scroll-to]').on('click', e => {
+    e.preventDefault();
+  
+    const target = parseInt($(e.currentTarget).attr('data-scroll-to'));
+  
+  
+    performTransition(target);
+  
+  });
+
+
+
+
+
+/*
+const sections = $('.section');
+let inScroll = false;
+const display = $('.maincontent');
+
+const performTransition = sectionEq => {
+    const position = `${sectionEq * -100}%`;
+    if (inScroll) return;
+    inScroll = true;
+
+    sections
+    .eq(sectionEq)
+    .addClass("active")
+    .siblings()
+    .removeClass("active");
+
+
+    display.css({
+        'transform': `translateY(${position})`
+        });
+    }
+
+
+
+
+const scrollToSection = direction => {
+    const activeSection = sections.filter('active');
+    const nextSection = activeSection.next();
+    const prevSection = activeSection.prev();
+
+    if(direction === 'next') {
+        performTransition(nextSection.index());
+    }
+
+    if(direction === 'prev') {
+        performTransition(prevSection.index())
+    }
+};
+
+
+$('.wrapper').on('wheel', e =>{
+    const deltaY = e.originalEvent.deltaY;
+
+    if(deltaY > 0) {
+        scrollToSection('next');
+    }
+
+    if(deltaY < 0) {
+     scrollToSection('prev');
+    }
+
+    console.log(deltaY);
+});
+
+*/
