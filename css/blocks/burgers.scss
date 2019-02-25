@@ -24,6 +24,10 @@ background: linear-gradient(to bottom, #f9b43b 0%,#eb8c38 50%,#f9b43b 100%); /* 
     
     padding-top: 10%;
     padding-bottom: 10%;
+
+    @include tablets() {
+        flex-direction: column;
+    }
 }
 
 .arrow-scroll-icon {
@@ -72,7 +76,6 @@ background: linear-gradient(to bottom, #f9b43b 0%,#eb8c38 50%,#f9b43b 100%); /* 
 
 .burgers__img-pic {
     @include tablets() {
-        width: 70%;
     }
 }
 
@@ -98,7 +101,6 @@ background: linear-gradient(to bottom, #f9b43b 0%,#eb8c38 50%,#f9b43b 100%); /* 
     flex: 1;
 
     @include tablets() {
-        width: 100%;
     }
 }
 
