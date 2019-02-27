@@ -67,16 +67,10 @@ background: linear-gradient(to bottom, #f9b43b 0%,#eb8c38 50%,#f9b43b 100%); /* 
 
 
 .burgers__item {
-    /*width: 56rem;
-    position: relative;
-   display: flex;
-   align-items: center;
-    justify-content: flex-start; */
-    min-width: 100%;
+
     display: flex;
-    flex-direction: row;
-    padding-bottom: 5%;
-    padding-top: 5%;
+    flex: 1 0 auto;
+    width: 100%;
     
 
 
@@ -92,51 +86,28 @@ background: linear-gradient(to bottom, #f9b43b 0%,#eb8c38 50%,#f9b43b 100%); /* 
 
 
 .burgers__img-pic {
+    width: 100%;
     @include tablets() {
     }
 }
 
-.burger-3 {
-    width: 28rem;
-}
-
-.burger-4 {
-    width: 28rem;
-    bottom: 15%;
-    position: relative;
-}
-
-.burger-5 {
-    position: relative;
-    bottom: 35%;
-}
 
 
 .burgers__col {
     display: flex;
-    justify-content: space-between;
-    flex: 1;
+    width: 50%;
 
     @include tablets() {
     }
 }
 
-.burgers__col_right {
-    width: 60%;
-    margin-left: 20%;
-    @include tablets() {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-}
 
 
 .burgers__img {
-    max-height: 250px;
-    max-width: 250px;
     text-align: center;
+    width: 90%;
+    display: flex;
+    align-items: center;
     
 
     @include tablets () {
