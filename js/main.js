@@ -554,7 +554,7 @@ function init(){
     });
 
     var placemark = new ymaps.Placemark([59.97, 30.31], {
-        hintContent: '<div class="map__hint>ул. Литераторов, д. 19</div>'
+        hintContent: '<div class="map__hint">ул. Литераторов, д. 19</div>'
 
     },
 
