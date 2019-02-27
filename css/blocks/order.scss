@@ -14,6 +14,14 @@
     padding-top: 9.375em;
     padding-bottom: 9.375em;
 
+    @include tablets() {
+        padding: 6em;
+    }
+
+    @include phones() {
+        padding:5em;
+    }
+
 
     .title {
         color: $yellow;
@@ -28,6 +36,10 @@
     justify-content: center;
     align-items: center;
     height: 100%;
+    @include tablets() {
+        width: 95%;
+        height: 100%;
+      }
 }
 
 

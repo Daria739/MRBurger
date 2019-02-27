@@ -320,10 +320,15 @@ const sections = $('.section');
 const display = $('.maincontent');
 let inScroll = false;
 
+const mobileDetect = new MobileDetect(window.navigator.userAgent);
+const isMobile = mobileDetect.mobile();
+
 const switchActiveClassInSideMenu = menuItemIndex => {
     $('.points__item').eq(menuItemIndex).addClass('active')
     .siblings().removeClass('active');
 }
+
+
 
 
 
@@ -406,6 +411,7 @@ $(document).on('keydown', e => {
         case 38: scrollToSection('prev'); break;
         case 40: scrollToSection('next'); break;
     }
+    touchmove: e => e.preventDefault()
 });
 
 $('[data-scroll-to]').on('click', e => {
@@ -417,7 +423,17 @@ $('[data-scroll-to]').on('click', e => {
     performTransition(target);
   
   });
+  
+  if (isMobile) {
+    $(document).swipe({
+      swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
 
+        const scrollDirection = direction === 'down' ? 'up' : 'down';
+        
+        scrollToSection(scrollDirection);
+      }
+    });
+  }
 
 
 

@@ -13,7 +13,6 @@ background: linear-gradient(to bottom, #f9b43b 0%,#eb8c38 50%,#f9b43b 100%); /* 
 
 .burgers__container {
     height: 100%;
-    position: relative;
 }
 
 .burgers__content {
@@ -27,6 +26,7 @@ background: linear-gradient(to bottom, #f9b43b 0%,#eb8c38 50%,#f9b43b 100%); /* 
 
     @include tablets() {
         flex-direction: column;
+        padding-top: 15%;
     }
 }
 
@@ -48,6 +48,14 @@ background: linear-gradient(to bottom, #f9b43b 0%,#eb8c38 50%,#f9b43b 100%); /* 
     width: 95%;
     height: 100%;
     padding-bottom: 5%;
+
+    @include tablets() {
+        width: 90%;
+        height: 90%;
+        overflow: hidden;
+        align-items: center;
+    }
+
 }
 
 .burgers__list {
@@ -75,6 +83,8 @@ background: linear-gradient(to bottom, #f9b43b 0%,#eb8c38 50%,#f9b43b 100%); /* 
         justify-content: center;
         align-items: center;
         text-align: center;
+        flex-flow: column;
+        width: 100%;
     }
 }
 
@@ -83,6 +93,7 @@ background: linear-gradient(to bottom, #f9b43b 0%,#eb8c38 50%,#f9b43b 100%); /* 
 .burgers__img-pic {
     width: 100%;
     @include tablets() {
+        width: 85%;
     }
 }
 
@@ -115,6 +126,10 @@ background: linear-gradient(to bottom, #f9b43b 0%,#eb8c38 50%,#f9b43b 100%); /* 
 .burgers__info {
     color: #fff;
     width: 380px;
+    @include tablets () {
+        width: 90%;
+        align-items: center;
+    }
 }
 
 
@@ -123,7 +138,8 @@ background: linear-gradient(to bottom, #f9b43b 0%,#eb8c38 50%,#f9b43b 100%); /* 
     margin-bottom: 2.5rem;
 
     @include tablets() {
-        font-size: 4rem;
+        font-size: 2.5rem;
+        line-height: 1;
         margin-bottom: 1.5rem;
     }
 }
@@ -144,6 +160,12 @@ background: linear-gradient(to bottom, #f9b43b 0%,#eb8c38 50%,#f9b43b 100%); /* 
     font-family: Gagalin;
     font-size: 1.875rem;
     margin-right: 1.875rem;
+
+    @include tablets () {
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
+    }
 }
 
 .burgers__price-number {
@@ -281,9 +303,10 @@ background: linear-gradient(to bottom, #f9b43b 0%,#eb8c38 50%,#f9b43b 100%); /* 
 }
 
 .burgers__kkal {
-    position: relative;
-    left: 9%;
-    top: 85%;
+    position: absolute;
+    width: 4.375rem;
+    height: 5rem;
+    bottom: 0rem;
     font-family: Gagalin;
     color: #fff;
     opacity: .5;

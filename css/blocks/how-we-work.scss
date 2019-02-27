@@ -5,8 +5,16 @@
     display: flex;
     align-items: center;
     background-position: center center;
+
+    @include tablets() {
+      max-width: 768px;
+    }
     .container {
         align-items: center;  
+        @include tablets() {
+          width: 95%;
+          height: 100%;
+        }
       }
 
       h2 {
@@ -25,7 +33,9 @@
 .player {
     position: relative;
     display: inline-block;
-    
+    @include tablets() {
+      width: 85%;
+    }
   
     &.hidden {
       opacity: 0;
@@ -42,9 +52,18 @@
     bottom: 0;
     background: url('../img/player-splash.png') center center / cover no-repeat;
     cursor: pointer;
+    width: 100%;
+    @include tablets() {
+      opacity: 0;
+    }
   }
   
+#yt-player {
+  max-width: 100%;
+}
+
   .player__wrapper {
+    width: 100%;
     &.active .player__splash {
       display: none;
     }
@@ -104,6 +123,9 @@
     top: 15px;
     left: 50px;
     cursor: pointer;
+    @include tablets() {
+      width: 220px;
+    }
   }
   
   .player__playback-button {
@@ -143,6 +165,12 @@
   position: relative;
   left: 410px;
   cursor: pointer;
+  @include tablets() {
+    display: none;
+  }
+  @include phones() {
+    display: none;
+  }
 }
 
 .player__pic {
@@ -158,6 +186,12 @@
   top: 15px;
   left: 485px;
   cursor: pointer;
+  @include tablets() {
+    display: none;
+  }
+  @include phones() {
+    display: none;
+  }
 }
 
 .player__playback-button-volume {
@@ -171,13 +205,14 @@
   top: -4px;
   transform: translateX(-50%);
   left: 100%;
+  @include tablets() {
+    display: none;
+  }
+  @include phones() {
+    display: none;
+  }
 } 
 
-input[type=range] {
-  -webkit-appearance: none;
-  width: 55%;
-  background: transparent;
-}
 
 .player__slider {
   height: 30px;
