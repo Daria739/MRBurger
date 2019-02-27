@@ -531,6 +531,18 @@ $('.player__splash').on('click', e => {
       return `${minutes}:${formattedSeconds}`;
   };
 
+  function editVolume () {				
+	if (player.getVolume() == 0) {
+		player.setVolume('100');
+	} else {
+		player.setVolume('0');
+    }
+
+    
+
+    
+};
+
 
 
 
@@ -623,6 +635,8 @@ function init(){
         //map.geoObjects.add(placemark); 
         clusterer.add(geoObjects);
     }
+
+
 
 
 

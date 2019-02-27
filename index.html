@@ -226,11 +226,6 @@
                                         </div>
                                     </div>
 
-                                    <div class="burgers__kkal">
-                                        <div class="burgers__kkal-number">1200</div>
-                                        <div class="burgers__kkal-measure">ккал</div>
-                                    </div>
-
                                     <div class="burgers__ingredients">
 
                                         <svg class="burgers__ingredients-icon">
@@ -314,18 +309,22 @@
                                         </div>
 
                                     </div>
+                                    <div class="burgers__kkal">
+                                        <div class="burgers__kkal-number">1200</div>
+                                        <div class="burgers__kkal-measure">ккал</div>
+                                    </div>
 
                                 </li>
 
                                 <li class="burgers__item">
 
-                                    <div class="burgers__col burgers__col_left">
+                                    <div class="burgers__col">
                                         <div class="burgers__img">
                                             <img src="./img/burger-slider-2.png" alt="burger" class="burgers__img-pic">
                                         </div>
                                     </div>
 
-                                    <div class="burgers__col burgers__col_right">
+                                    <div class="burgers__col">
 
                                         <div class="burgers__info">
                                             <h2 class="title burgers__title">Dark beef burger</h2>
@@ -568,7 +567,7 @@
 
                                 <li class="burgers__item">
 
-                                    <div class="burgers__col burgers__col_left">
+                                    <div class="burgers__col">
                                         <div class="burgers__img">
                                             <img src="./img/burger-slider-4.png" alt="burger"
                                                 class="burgers__img-pic burger-4">
@@ -693,14 +692,14 @@
 
                                 <li class="burgers__item">
 
-                                    <div class="burgers__col burgers__col_left">
+                                    <div class="burgers__col">
                                         <div class="burgers__img">
                                             <img src="./img/burger-slider-5.png" alt="burger"
                                                 class="burgers__img-pic burger-5">
                                         </div>
                                     </div>
 
-                                    <div class="burgers__col burgers__col_right">
+                                    <div class="burgers__col">
 
                                         <div class="burgers__info">
                                             <h2 class="title burgers__title">Dark beef burger</h2>
@@ -1109,9 +1108,15 @@
                                 </div>
 
                                 <div class="player__volume">
-                                    <div class="player__volume-icon"></div>
-                                        <span class="player__volume-completed"></span> 
-                                        <span class="player__volume-estimate"></span>
+                                    <button class="player__button" id="volume" onclick="editVolume ();">
+                                        <svg class="player__pic" id="volume" viewBox="0 0 300 300" fill="#626262">
+                                                <use xlink:href="../img/sprite.svg#volume"></use>
+                                        </svg>
+                                    </button>
+                                   <div class="player__playback-volume">
+                                        <button class="player__playback-button-volume"></button>
+                                    </div>
+                                    
                                 </div>
                             </div>
                         </div>  

@@ -38,12 +38,6 @@ background: linear-gradient(to bottom, #f9b43b 0%,#eb8c38 50%,#f9b43b 100%); /* 
 
 
 .burgers__slider {
-
-    /*width: 56rem;
-    display: flex;
-    align-items: center;
-    overflow: hidden;*/
-
     margin: 0 auto;
     overflow: hidden;
     position: relative;
@@ -53,6 +47,7 @@ background: linear-gradient(to bottom, #f9b43b 0%,#eb8c38 50%,#f9b43b 100%); /* 
     align-items: center;
     width: 95%;
     height: 100%;
+    padding-bottom: 5%;
 }
 
 .burgers__list {
@@ -296,10 +291,6 @@ background: linear-gradient(to bottom, #f9b43b 0%,#eb8c38 50%,#f9b43b 100%); /* 
     flex-direction: column;
     align-items: center;
 
-    /*width: 4rem;
-    height: 4rem;
-    position: relative;*/
-
     @include tablets() {
         right: 0;
         top: .6rem;
@@ -316,7 +307,7 @@ background: linear-gradient(to bottom, #f9b43b 0%,#eb8c38 50%,#f9b43b 100%); /* 
     height: 3.75rem;
     background-position: center;
     font-size: 1.25rem;
-    padding-top:25%;
+    padding-top:20%;
     text-align: center;
     display: flex;
     flex-direction: column;
