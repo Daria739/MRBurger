@@ -529,7 +529,44 @@ $('.player__splash').on('click', e => {
 
       const formattedSeconds = seconds < 10 ? `0${seconds}` : seconds;
       return `${minutes}:${formattedSeconds}`;
-  }
+  };
 
 
 
+
+
+
+
+
+
+  // Карта 
+
+
+  ymaps.ready(init);
+ 
+function init(){     
+ 
+   var myMap = new ymaps.Map("map", {
+        center: [59.94, 30.32],
+        zoom: 12,
+        controls: ['zoomControl'],
+        behaviors: ['drag']
+    });
+
+    var placemark = new ymaps.Placemark([59.97, 30.31], {
+        hintContent: '<div class="map__hint>ул. Литераторов, д. 19</div>'
+
+    },
+
+    {
+        iconLayout: 'default#image',
+        iconImageHref: '../img/map-marker.png',
+        iconImageSize: [46, 57]
+    });
+    
+    map.geoObjects.add(placemark); 
+
+
+
+ 
+}
