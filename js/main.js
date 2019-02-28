@@ -568,7 +568,6 @@ function editVolume() {
       changeVolumeButtonPosition(clickedPercents);
       player.setVolume(clickedPercents);
       currentVol = clickedPercents;
-      console.log(currentVol);
     });
     
     function changeVolumeButtonPosition(percents) {
@@ -578,6 +577,7 @@ function editVolume() {
     }
 
 }
+editVolume();
 
 $('.player__button-volume').on('click', function(e) {
     var volumeButton = $(e.currentTarget);
