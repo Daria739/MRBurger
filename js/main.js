@@ -423,7 +423,6 @@ $('[data-scroll-to]').on('click', e => {
     performTransition(target);
   
   });
-  
   if (isMobile) {
     $(document).swipe({
       swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
@@ -481,7 +480,7 @@ $('.player__splash').on('click', e => {
     player.playVideo();
 })
 
-  function onPlayerReady(event) {
+  function onPlayerReady(e) {
   
 
   let interval;
@@ -547,18 +546,43 @@ $('.player__splash').on('click', e => {
       return `${minutes}:${formattedSeconds}`;
   };
 
-  function editVolume () {				
-	if (player.getVolume() == 0) {
-		player.setVolume('100');
-	} else {
-		player.setVolume('0');
+//Volume
+
+function editVolume () {  
+
+    changeVolumeButtonPosition(100);
+    let currentVol = 0;
+    
+    $('.player__playback-volume').on('click', function (e) {
+      e.preventDefault();
+      var volumeBar = $(e.currentTarget);
+      var newButtonPosition = e.pageX - volumeBar.offset().left;
+      var clickedPercents = newButtonPosition / bar.width() * 100;
+    
+      changeVolumeButtonPosition(clickedPercents);
+      player.setVolume(clickedPercents);
+      currentVol = clickedPercents;
+      console.log(currentVol);
+    });
+    
+    
+    function changeVolumeButtonPosition(percents) {
+      $('.player__playback-button-volume').css({
+        left: percents + '%'
+      });
     }
 
-    
+    $('.player__button-volume').on('click', function(e){
+        if (player.getVolume() == 0) {
+            player.setVolume(currentVol);
+        } else {
+            player.setVolume('0');
+        }
+    });
 
-    
-};
 
+
+}
 
 
 

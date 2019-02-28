@@ -201,7 +201,7 @@ background: linear-gradient(to bottom, #f9b43b 0%,#eb8c38 50%,#f9b43b 100%); /* 
     
 
     @include tablets() {
-        top: .6rem;
+        top: 4rem;
         bottom: auto;
     }
 }
@@ -316,7 +316,7 @@ background: linear-gradient(to bottom, #f9b43b 0%,#eb8c38 50%,#f9b43b 100%); /* 
 
     @include tablets() {
         right: 0;
-        top: .6rem;
+        top: 4rem;
         left: auto;
         bottom: auto;
     }

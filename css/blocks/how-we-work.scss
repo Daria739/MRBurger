@@ -118,7 +118,7 @@
   .player__playback {
     position: absolute;
     height: 4px;
-    width: 420px;
+    width: 400px;
     background: #626262;
     top: 15px;
     left: 50px;
@@ -149,7 +149,7 @@
     font-weight: bold;
   }
 
-
+/*
   .player__volume {
     height: 100%;
     width: 15%;
@@ -157,13 +157,13 @@
     align-items: center;
     justify-content: flex-end;
     margin-right: 1%;
-}
+}*/
 
 
-.player__button {
+.player__button-volume {
   height: 100%;
   position: relative;
-  left: 410px;
+  left: 450px;
   cursor: pointer;
   @include tablets() {
     display: none;
@@ -212,10 +212,3 @@
     display: none;
   }
 } 
-
-
-.player__slider {
-  height: 30px;
-  position: relative;
-  left: 100%;
-}
