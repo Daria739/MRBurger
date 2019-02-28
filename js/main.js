@@ -546,9 +546,14 @@ $('.player__splash').on('click', e => {
       return `${minutes}:${formattedSeconds}`;
   };
 
+
+
+
 //Volume
 
-function editVolume () {  
+
+
+function editVolume() {  
 
     changeVolumeButtonPosition(100);
     let currentVol = 0;
@@ -558,6 +563,7 @@ function editVolume () {
       var bar = $(e.currentTarget);
       var newButtonPosition = e.pageX - bar.offset().left;
       var clickedPercents = newButtonPosition / bar.width() * 100;
+      
     
       changeVolumeButtonPosition(clickedPercents);
       player.setVolume(clickedPercents);
@@ -565,24 +571,54 @@ function editVolume () {
       console.log(currentVol);
     });
     
-    
     function changeVolumeButtonPosition(percents) {
       $('.player__playback-button-volume').css({
         left: percents + '%'
       });
     }
 
-    $('.player__button-volume').on('click', function(e){
-        if (player.getVolume() == 0) {
-            player.setVolume(currentVol);
-        } else {
-            player.setVolume('0');
-        }
-    });
-
-
-
 }
+
+$('.player__button-volume').on('click', function(e) {
+    var volumeButton = $(e.currentTarget);
+    var mute = player.isMuted();
+
+     if (mute) {
+       volumeButton.removeClass('mute');
+       player.unMute();
+       changeVolumeButtonPosition(player.getVolume())
+     } else {
+       volumeButton.addClass('mute');
+       player.mute();
+       changeVolumeButtonPosition(0)
+     }
+
+  });
+
+
+
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
