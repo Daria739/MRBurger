@@ -1114,7 +1114,7 @@
                                 </button>
                                 <div class="player__playback-volume">
                                     <button class="player__playback-button-volume"></button>
-                            </div>
+                                </div>
 
                             </div>
                         </div>
@@ -1133,15 +1133,15 @@
                             <div class="form__row">
 
                                 <label for="name" class="form__block">
-                                    <div class="form__block-title">Имя</div>
-                                    <input type="text" class="form__block-input" name="name" required>
-                                    <div class="error"></div>
+                                    <span class="form__block-title">Имя</span>
+                                    <input type="text" class="form__block-input" id="name" name="name" required>
+                                    <span class="error"></span>
                                 </label>
 
                                 <label for="phone" class="form__block">
-                                    <div class="form__block-title">Телефон</div>
-                                    <input type="text" class="form__block-input" name="phone" required>
-                                    <div class="error"></div>
+                                    <span class="form__block-title">Телефон</span>
+                                    <input type="text" class="form__block-input" id="phone" name="phone" required>
+                                    <span class="error"></span>
                                 </label>
 
                             </div>
@@ -1149,8 +1149,8 @@
                             <div class="form__row">
 
                                 <label for="street" class="form__block">
-                                    <div class="form__block-title">Улица</div>
-                                    <input type="text" class="form__block-input" name="street">
+                                    <span class="form__block-title">Улица</span>
+                                    <input type="text" class="form__block-input" id="street" name="street">
                                 </label>
 
                             </div>
@@ -1159,23 +1159,23 @@
                             <div class="form__row">
 
                                 <label for="house-number" class="form__block">
-                                    <div class="form__block-title">Дом</div>
-                                    <input type="text" class="form__block-input" name="house-number">
+                                    <span class="form__block-title">Дом</span>
+                                    <input type="text" class="form__block-input" id="house-number" name="house-number">
                                 </label>
 
                                 <label for="block-number" class="form__block">
-                                    <div class="form__block-title">Корпус</div>
-                                    <input type="text" class="form__block-input" name="block-number">
+                                    <span class="form__block-title">Корпус</span>
+                                    <input type="text" class="form__block-input" id="block-number" name="block-number">
                                 </label>
 
                                 <label for="appartement" class="form__block">
-                                    <div class="form__block-title">Квартира</div>
-                                    <input type="text" class="form__block-input" name="appartement">
+                                    <span class="form__block-title">Квартира</span>
+                                    <input type="text" class="form__block-input" id="appartement" name="appartement">
                                 </label>
 
                                 <label for="floor" class="form__block">
-                                    <div class="form__block-title">Этаж</div>
-                                    <input type="text" class="form__block-input" name="floor">
+                                    <span class="form__block-title">Этаж</span>
+                                    <input type="text" class="form__block-input" id="floor" name="floor">
                                 </label>
 
                             </div>
@@ -1187,8 +1187,8 @@
                             <div class="form__row">
 
                                 <label for="comment" class="form__block">
-                                    <div class="form__block-title"> Комментарий</div>
-                                    <textarea name="comment" rows="5"
+                                    <span class="form__block-title"> Комментарий</span>
+                                    <textarea name="comment" rows="5" id="comment"
                                         class="form__block-input form__block-input_textarea" required></textarea>
                                     <div class="error"></div>
                                 </label>
@@ -1347,7 +1347,7 @@
 
 
 
-    <script type="template" id="modal-template">
+    <script type="text/template" id="modal-template">
 
         <div class="overlay" id="modal-overlay">
             <div class="popup__container">
