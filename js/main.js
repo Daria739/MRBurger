@@ -555,9 +555,9 @@ function editVolume () {
     
     $('.player__playback-volume').on('click', function (e) {
       e.preventDefault();
-      var volumeBar = $(e.currentTarget);
-      var newButtonPosition = e.pageX - volumeBar.offset().left;
-      var clickedPercents = newButtonPosition / volumeBar.width() * 100;
+      var bar = $(e.currentTarget);
+      var newButtonPosition = e.pageX - bar.offset().left;
+      var clickedPercents = newButtonPosition / bar.width() * 100;
     
       changeVolumeButtonPosition(clickedPercents);
       player.setVolume(clickedPercents);
